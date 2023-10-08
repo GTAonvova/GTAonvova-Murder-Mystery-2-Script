@@ -6,6 +6,8 @@
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
 local MainFrame = Instance.new("Frame")
 local Buttons = Instance.new("Frame")
 local Main = Instance.new("TextButton")
@@ -54,6 +56,46 @@ TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
 TextButton.MouseButton1Up:connect(function()
 	Frame.Visible = false
+end)
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.870154977, 0, -0.0476190485, 0)
+TextButton_2.Size = UDim2.new(0, 36, 0, 21)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "-"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+TextButton_2.Visible = true
+TextButton_2.MouseButton1Up:connect(function()
+	MainFrame.Visible = false
+	TextButton_2.Visible = false
+	TextButton_3.Visible = true
+end)
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BackgroundTransparency = 1.000
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.870154977, 0, -0.0476190485, 0)
+TextButton_3.Size = UDim2.new(0, 36, 0, 21)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "-"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+TextButton_3.Visible = true
+TextButton_3.MouseButton1Up:connect(function()
+	MainFrame.Visible = true
+	TextButton_2.Visible = true
+	TextButton_3.Visible = false
 end)
 
 MainFrame.Name = "MainFrame"
