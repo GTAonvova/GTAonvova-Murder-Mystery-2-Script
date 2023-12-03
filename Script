@@ -7,30 +7,59 @@ local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
-local TextButton_3 = Instance.new("TextButton")
 local MainFrame = Instance.new("Frame")
-local Buttons = Instance.new("Frame")
-local Main = Instance.new("TextButton")
-local Maker = Instance.new("TextButton")
-local Toggles = Instance.new("TextButton")
+local TogglesFrame = Instance.new("ScrollingFrame")
+local FakeGun = Instance.new("TextButton")
+local UIGridLayout = Instance.new("UIGridLayout")
+local RainGuns = Instance.new("TextButton")
+local ToggleButton = Instance.new("Frame")
+local Off = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local On = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local SpawnTrap = Instance.new("TextButton")
 local Home = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
+local Buttons = Instance.new("Frame")
+local Toggles = Instance.new("TextButton")
+local Maker = Instance.new("TextButton")
+local Main = Instance.new("TextButton")
+local Player = Instance.new("TextButton")
+local Esp = Instance.new("TextButton")
 local GunMaker = Instance.new("ScrollingFrame")
+local Dck = Instance.new("TextButton")
 local SmallDck = Instance.new("TextButton")
+local BigDck = Instance.new("TextButton")
 local VeryBigDck = Instance.new("TextButton")
 local Heart = Instance.new("TextButton")
 local Sqare = Instance.new("TextButton")
 local DckText = Instance.new("TextButton")
-local Dck = Instance.new("TextButton")
-local BigDck = Instance.new("TextButton")
-local TogglesFrame = Instance.new("ScrollingFrame")
-local SpawnTrap = Instance.new("TextButton")
-local FakeGun = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+local Maker_2 = Instance.new("Frame")
+local _1 = Instance.new("TextButton")
+local _2 = Instance.new("TextButton")
+local _3 = Instance.new("TextButton")
+local _4 = Instance.new("TextButton")
+local _5 = Instance.new("TextButton")
+local _7 = Instance.new("TextButton")
+local _6 = Instance.new("TextButton")
+local _8 = Instance.new("TextButton")
+local _9 = Instance.new("TextButton")
+local _10 = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local Player_2 = Instance.new("Frame")
+local Fly = Instance.new("TextLabel")
+local ToggleButton_2 = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local On_2 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Off_2 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Esp_2 = Instance.new("ScrollingFrame")
+local UIGridLayout_2 = Instance.new("UIGridLayout")
 
 --Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -41,8 +70,6 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.169856459, 0, 0.134538159, 0)
 Frame.Size = UDim2.new(0, 516, 0, 21)
-Frame.Active = true
-Frame.Draggable = true
 
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(181, 0, 0)
@@ -54,9 +81,6 @@ TextButton.Font = Enum.Font.SourceSans
 TextButton.Text = "X"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
-TextButton.MouseButton1Up:connect(function()
-	Frame.Visible = false
-end)
 
 TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -71,32 +95,6 @@ TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton_2.TextScaled = true
 TextButton_2.TextSize = 14.000
 TextButton_2.TextWrapped = true
-TextButton_2.Visible = true
-TextButton_2.MouseButton1Up:connect(function()
-	MainFrame.Visible = false
-	TextButton_2.Visible = false
-	TextButton_3.Visible = true
-end)
-
-TextButton_3.Parent = Frame
-TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_3.BackgroundTransparency = 1.000
-TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0.870154977, 0, -0.0476190485, 0)
-TextButton_3.Size = UDim2.new(0, 36, 0, 21)
-TextButton_3.Font = Enum.Font.SourceSans
-TextButton_3.Text = "-"
-TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_3.TextScaled = true
-TextButton_3.TextSize = 14.000
-TextButton_3.TextWrapped = true
-TextButton_3.Visible = true
-TextButton_3.MouseButton1Up:connect(function()
-	MainFrame.Visible = true
-	TextButton_2.Visible = true
-	TextButton_3.Visible = false
-end)
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = Frame
@@ -106,71 +104,100 @@ MainFrame.BorderSizePixel = 0
 MainFrame.Position = UDim2.new(-0.000686172396, 0, 0.991681755, 0)
 MainFrame.Size = UDim2.new(0, 516, 0, 363)
 
-Buttons.Name = "Buttons"
-Buttons.Parent = MainFrame
-Buttons.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
-Buttons.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Buttons.BorderSizePixel = 0
-Buttons.Position = UDim2.new(0, 0, 0.0137741044, 0)
-Buttons.Size = UDim2.new(0, 76, 0, 352)
+TogglesFrame.Name = "TogglesFrame"
+TogglesFrame.Parent = MainFrame
+TogglesFrame.Active = true
+TogglesFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TogglesFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TogglesFrame.BorderSizePixel = 0
+TogglesFrame.Position = UDim2.new(0.147286847, 0, 0.05785124, 0)
+TogglesFrame.Size = UDim2.new(0, 439, 0, 342)
 
-Main.Name = "Main"
-Main.Parent = Buttons
-Main.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0, 0, 0.0284090918, 0)
-Main.Size = UDim2.new(0, 76, 0, 25)
-Main.Font = Enum.Font.SourceSans
-Main.Text = "Home"
-Main.TextColor3 = Color3.fromRGB(255, 255, 255)
-Main.TextScaled = true
-Main.TextSize = 14.000
-Main.TextWrapped = true
-Main.MouseButton1Down:connect(function()
-	TogglesFrame.Visible = false
-	Home.Visible = true
-	GunMaker.Visible = false
-end)
+FakeGun.Name = "Fake Gun"
+FakeGun.Parent = TogglesFrame
+FakeGun.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+FakeGun.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FakeGun.BorderSizePixel = 0
+FakeGun.Position = UDim2.new(-0.000776981702, 0, -0.00183261628, 0)
+FakeGun.Size = UDim2.new(0, 409, 0, 34)
+FakeGun.Font = Enum.Font.SourceSans
+FakeGun.Text = "Fake Gun"
+FakeGun.TextColor3 = Color3.fromRGB(255, 255, 255)
+FakeGun.TextScaled = true
+FakeGun.TextSize = 14.000
+FakeGun.TextWrapped = true
 
-Maker.Name = "Maker"
-Maker.Parent = Buttons
-Maker.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-Maker.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Maker.BorderSizePixel = 0
-Maker.Position = UDim2.new(0, 0, 0.125, 0)
-Maker.Size = UDim2.new(0, 76, 0, 25)
-Maker.Font = Enum.Font.SourceSans
-Maker.Text = "Gun Maker"
-Maker.TextColor3 = Color3.fromRGB(255, 255, 255)
-Maker.TextScaled = true
-Maker.TextSize = 14.000
-Maker.TextWrapped = true
-Maker.MouseButton1Down:connect(function()
-	TogglesFrame.Visible = false
-	Home.Visible = false
-	GunMaker.Visible = true
-end)
+UIGridLayout.Parent = TogglesFrame
+UIGridLayout.FillDirection = Enum.FillDirection.Vertical
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellSize = UDim2.new(0, 400, 0, 30)
 
-Toggles.Name = "Toggles"
-Toggles.Parent = Buttons
-Toggles.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
-Toggles.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggles.BorderSizePixel = 0
-Toggles.Position = UDim2.new(0, 0, 0.21875, 0)
-Toggles.Size = UDim2.new(0, 76, 0, 25)
-Toggles.Font = Enum.Font.SourceSans
-Toggles.Text = "Toggles"
-Toggles.TextColor3 = Color3.fromRGB(255, 255, 255)
-Toggles.TextScaled = true
-Toggles.TextSize = 14.000
-Toggles.TextWrapped = true
-Toggles.MouseButton1Down:connect(function()
-	TogglesFrame.Visible = true
-	Home.Visible = false
-	GunMaker.Visible = false
-end)
+RainGuns.Name = "RainGuns"
+RainGuns.Parent = TogglesFrame
+RainGuns.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+RainGuns.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RainGuns.BorderSizePixel = 0
+RainGuns.Position = UDim2.new(-0.000776981702, 0, -0.00183261628, 0)
+RainGuns.Size = UDim2.new(0, 409, 0, 34)
+RainGuns.Font = Enum.Font.SourceSans
+RainGuns.Text = "Rain Guns"
+RainGuns.TextColor3 = Color3.fromRGB(255, 255, 255)
+RainGuns.TextScaled = true
+RainGuns.TextSize = 14.000
+RainGuns.TextWrapped = true
 
+ToggleButton.Name = "ToggleButton"
+ToggleButton.Parent = RainGuns
+ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToggleButton.BorderSizePixel = 0
+ToggleButton.Position = UDim2.new(0.847991943, 0, 0.0882354751, 0)
+ToggleButton.Size = UDim2.new(0, 49, 0, 27)
+
+Off.Name = "Off"
+Off.Parent = ToggleButton
+Off.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Off.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Off.BorderSizePixel = 0
+Off.Position = UDim2.new(0.00111482583, 0, 0, 0)
+Off.Size = UDim2.new(0, 26, 0, 27)
+Off.Font = Enum.Font.SourceSans
+Off.Text = ""
+Off.TextColor3 = Color3.fromRGB(0, 0, 0)
+Off.TextSize = 14.000
+
+UICorner.Parent = Off
+
+UICorner_2.Parent = ToggleButton
+
+On.Name = "On"
+On.Parent = ToggleButton
+On.BackgroundColor3 = Color3.fromRGB(0, 255, 8)
+On.BorderColor3 = Color3.fromRGB(0, 0, 0)
+On.BorderSizePixel = 0
+On.Position = UDim2.new(0.592951536, 0, 0, 0)
+On.Size = UDim2.new(0, 29, 0, 27)
+On.Visible = false
+On.Font = Enum.Font.SourceSans
+On.Text = ""
+On.TextColor3 = Color3.fromRGB(0, 0, 0)
+On.TextSize = 14.000
+
+UICorner_3.Parent = On
+
+SpawnTrap.Name = "Spawn Trap"
+SpawnTrap.Parent = TogglesFrame
+SpawnTrap.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+SpawnTrap.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpawnTrap.BorderSizePixel = 0
+SpawnTrap.Position = UDim2.new(0, 0, 0.30994153, 0)
+SpawnTrap.Size = UDim2.new(0, 409, 0, 34)
+SpawnTrap.Font = Enum.Font.SourceSans
+SpawnTrap.Text = "Spawn Trap"
+SpawnTrap.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpawnTrap.TextScaled = true
+SpawnTrap.TextSize = 14.000
+SpawnTrap.TextWrapped = true
 
 Home.Name = "Home"
 Home.Parent = MainFrame
@@ -194,6 +221,85 @@ TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
+Buttons.Name = "Buttons"
+Buttons.Parent = MainFrame
+Buttons.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Buttons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Buttons.BorderSizePixel = 0
+Buttons.ClipsDescendants = true
+Buttons.Position = UDim2.new(0, 0, 0.0137741044, 0)
+Buttons.Size = UDim2.new(0, 76, 0, 352)
+
+Toggles.Name = "Toggles"
+Toggles.Parent = Buttons
+Toggles.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Toggles.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggles.BorderSizePixel = 0
+Toggles.Position = UDim2.new(0, 0, 0.361000001, 0)
+Toggles.Size = UDim2.new(0, 76, 0, 25)
+Toggles.Font = Enum.Font.SourceSans
+Toggles.Text = "Toggles"
+Toggles.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggles.TextScaled = true
+Toggles.TextSize = 14.000
+Toggles.TextWrapped = true
+
+Maker.Name = "Maker"
+Maker.Parent = Buttons
+Maker.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Maker.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Maker.BorderSizePixel = 0
+Maker.Position = UDim2.new(0, 0, 0.113636367, 0)
+Maker.Size = UDim2.new(0, 76, 0, 25)
+Maker.Font = Enum.Font.SourceSans
+Maker.Text = "Gun Maker"
+Maker.TextColor3 = Color3.fromRGB(255, 255, 255)
+Maker.TextScaled = true
+Maker.TextSize = 14.000
+Maker.TextWrapped = true
+
+Main.Name = "Main"
+Main.Parent = Buttons
+Main.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0, 0, 0.0284090918, 0)
+Main.Size = UDim2.new(0, 76, 0, 25)
+Main.Font = Enum.Font.SourceSans
+Main.Text = "Home"
+Main.TextColor3 = Color3.fromRGB(255, 255, 255)
+Main.TextScaled = true
+Main.TextSize = 14.000
+Main.TextWrapped = true
+
+Player.Name = "Player"
+Player.Parent = Buttons
+Player.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Player.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Player.BorderSizePixel = 0
+Player.Position = UDim2.new(0, 0, 0.196999997, 0)
+Player.Size = UDim2.new(0, 76, 0, 25)
+Player.Font = Enum.Font.SourceSans
+Player.Text = "Player"
+Player.TextColor3 = Color3.fromRGB(255, 255, 255)
+Player.TextScaled = true
+Player.TextSize = 14.000
+Player.TextWrapped = true
+
+Esp.Name = "Esp"
+Esp.Parent = Buttons
+Esp.BackgroundColor3 = Color3.fromRGB(71, 71, 71)
+Esp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Esp.BorderSizePixel = 0
+Esp.Position = UDim2.new(0, 0, 0.279000014, 0)
+Esp.Size = UDim2.new(0, 76, 0, 25)
+Esp.Font = Enum.Font.SourceSans
+Esp.Text = "Esp"
+Esp.TextColor3 = Color3.fromRGB(255, 255, 255)
+Esp.TextScaled = true
+Esp.TextSize = 14.000
+Esp.TextWrapped = true
+
 GunMaker.Name = "GunMaker"
 GunMaker.Parent = MainFrame
 GunMaker.Active = true
@@ -202,382 +308,749 @@ GunMaker.BorderColor3 = Color3.fromRGB(0, 0, 0)
 GunMaker.BorderSizePixel = 0
 GunMaker.Position = UDim2.new(0.147286847, 0, 0.05785124, 0)
 GunMaker.Size = UDim2.new(0, 439, 0, 342)
-GunMaker.Visible = true
+GunMaker.Visible = false
 
 Dck.Name = "D#ck"
 Dck.Parent = GunMaker
 Dck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 Dck.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Dck.BorderSizePixel = 0
-Dck.Position = UDim2.new(0.0015009226, 0, 0.0217236523, 0)
-Dck.Size = UDim2.new(0, 409, 0, 34)
+Dck.Position = UDim2.new(0.783599079, 0, 0, 0)
+Dck.Size = UDim2.new(0, 95, 0, 48)
 Dck.Font = Enum.Font.SourceSans
 Dck.Text = "D#ck"
 Dck.TextColor3 = Color3.fromRGB(255, 255, 255)
 Dck.TextScaled = true
 Dck.TextSize = 14.000
 Dck.TextWrapped = true
-Dck.MouseButton1Up:connect(function()
-	pl = game.Players.LocalPlayer
-	s = pl.Backpack:GetChildren()
-	s0 = {}
-	for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
-	-----------
-	s0[1].Grip = CFrame.new(0, 0, 0)
-	s0[1].Parent = pl.Character
-	s0[2].Grip = CFrame.new(1.5, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[2].Parent = pl.Character
-	s0[3].Grip = CFrame.new(1.0, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[3].Parent = pl.Character
-	s0[4].Grip = CFrame.new(2., 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[4].Parent = pl.Character
-	s0[5].Grip = CFrame.new(1.5, -0.700000048, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[5].Parent = pl.Character
-	s0[6].Grip = CFrame.new(1.5, -1.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[6].Parent = pl.Character
-	s0[7].Grip = CFrame.new(1.5, -2.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[7].Parent = pl.Character
-end)
 
 SmallDck.Name = "Small D#ck"
 SmallDck.Parent = GunMaker
 SmallDck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 SmallDck.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SmallDck.BorderSizePixel = 0
-SmallDck.Position = UDim2.new(0.0015009226, 0, 0.0796125978, 0)
-SmallDck.Size = UDim2.new(0, 409, 0, 34)
+SmallDck.Position = UDim2.new(0.783599079, 0, 0.140350878, 0)
+SmallDck.Size = UDim2.new(0, 95, 0, 48)
 SmallDck.Font = Enum.Font.SourceSans
 SmallDck.Text = "Small D#ck"
 SmallDck.TextColor3 = Color3.fromRGB(255, 255, 255)
 SmallDck.TextScaled = true
 SmallDck.TextSize = 14.000
 SmallDck.TextWrapped = true
-SmallDck.MouseButton1Up:connect(function()
-	pl = game.Players.LocalPlayer
-	s = pl.Backpack:GetChildren()
-	s0 = {}
-	for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
-	-----------
-	s0[1].Grip = CFrame.new(0, 0, 0)
-	s0[1].Parent = pl.Character
-	s0[2].Grip = CFrame.new(1.5, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[2].Parent = pl.Character
-	s0[3].Grip = CFrame.new(1.0, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[3].Parent = pl.Character
-	s0[4].Grip = CFrame.new(2., 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[4].Parent = pl.Character
-	s0[5].Grip = CFrame.new(1.5, -0.700000048, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[5].Parent = pl.Character
-end)
 
 BigDck.Name = "Big D#ck"
 BigDck.Parent = GunMaker
 BigDck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 BigDck.BorderColor3 = Color3.fromRGB(0, 0, 0)
 BigDck.BorderSizePixel = 0
-BigDck.Position = UDim2.new(0.0015009226, 0, 0.14238739, 0)
-BigDck.Size = UDim2.new(0, 409, 0, 34)
+BigDck.Position = UDim2.new(0.783599079, 0, 0.280701756, 0)
+BigDck.Size = UDim2.new(0, 95, 0, 48)
 BigDck.Font = Enum.Font.SourceSans
 BigDck.Text = "Big D#ck"
 BigDck.TextColor3 = Color3.fromRGB(255, 255, 255)
 BigDck.TextScaled = true
 BigDck.TextSize = 14.000
 BigDck.TextWrapped = true
-BigDck.MouseButton1Up:connect(function()
-	pl = game.Players.LocalPlayer
-	s = pl.Backpack:GetChildren()
-	s0 = {}
-	for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
-	-----------
-	s0[1].Grip = CFrame.new(0, 0, 0)
-	s0[1].Parent = pl.Character
-	s0[2].Grip = CFrame.new(1.5, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[2].Parent = pl.Character
-	s0[3].Grip = CFrame.new(1.0, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[3].Parent = pl.Character
-	s0[4].Grip = CFrame.new(2., 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[4].Parent = pl.Character
-	s0[5].Grip = CFrame.new(1.5, -0.700000048, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[5].Parent = pl.Character
-	s0[6].Grip = CFrame.new(1.5, -1.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[6].Parent = pl.Character
-	s0[7].Grip = CFrame.new(1.5, -2.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[7].Parent = pl.Character
-	s0[8].Grip = CFrame.new(1.5, -3.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[8].Parent = pl.Character
-	s0[9].Grip = CFrame.new(1.5, -4.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[9].Parent = pl.Character
-	s0[10].Grip = CFrame.new(1.5, -5.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[10].Parent = pl.Character
-
-end)
 
 VeryBigDck.Name = "Very Big D#ck"
 VeryBigDck.Parent = GunMaker
 VeryBigDck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 VeryBigDck.BorderColor3 = Color3.fromRGB(0, 0, 0)
 VeryBigDck.BorderSizePixel = 0
-VeryBigDck.Position = UDim2.new(0.0015009226, 0, 0.202845752, 0)
-VeryBigDck.Size = UDim2.new(0, 409, 0, 34)
+VeryBigDck.Position = UDim2.new(0.783599079, 0, 0.421052635, 0)
+VeryBigDck.Size = UDim2.new(0, 95, 0, 48)
 VeryBigDck.Font = Enum.Font.SourceSans
 VeryBigDck.Text = "Very Big D#ck"
 VeryBigDck.TextColor3 = Color3.fromRGB(255, 255, 255)
 VeryBigDck.TextScaled = true
 VeryBigDck.TextSize = 14.000
 VeryBigDck.TextWrapped = true
-VeryBigDck.MouseButton1Up:connect(function()
-	pl = game.Players.LocalPlayer
-	s = pl.Backpack:GetChildren()
-	s0 = {}
-	for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
-	-----------
-	s0[1].Grip = CFrame.new(0, 0, 0)
-	s0[1].Parent = pl.Character
-	s0[2].Grip = CFrame.new(1.5, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[2].Parent = pl.Character
-	s0[3].Grip = CFrame.new(1.0, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[3].Parent = pl.Character
-	s0[4].Grip = CFrame.new(2., 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[4].Parent = pl.Character
-	s0[5].Grip = CFrame.new(1.5, -0.700000048, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[5].Parent = pl.Character
-	s0[6].Grip = CFrame.new(1.5, -1.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[6].Parent = pl.Character
-	s0[7].Grip = CFrame.new(1.5, -2.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[7].Parent = pl.Character
-	s0[8].Grip = CFrame.new(1.5, -3.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[8].Parent = pl.Character
-	s0[9].Grip = CFrame.new(1.5, -4.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[9].Parent = pl.Character
-	s0[10].Grip = CFrame.new(1.5, -5.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[10].Parent = pl.Character
-	s0[11].Grip = CFrame.new(1.5, -6.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[11].Parent = pl.Character
-	s0[12].Grip = CFrame.new(1.5, -7.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[12].Parent = pl.Character
-	s0[13].Grip = CFrame.new(1.5, -8.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[13].Parent = pl.Character
-	s0[14].Grip = CFrame.new(1.5, -9.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[14].Parent = pl.Character
-	s0[15].Grip = CFrame.new(1.5, -10.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[15].Parent = pl.Character
-	
-end)
 
 Heart.Name = "Heart"
 Heart.Parent = GunMaker
 Heart.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 Heart.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Heart.BorderSizePixel = 0
-Heart.Position = UDim2.new(0.0015009226, 0, 0.26685971, 0)
-Heart.Size = UDim2.new(0, 409, 0, 34)
+Heart.Position = UDim2.new(0.783599079, 0, 0.561403513, 0)
+Heart.Size = UDim2.new(0, 95, 0, 48)
 Heart.Font = Enum.Font.SourceSans
 Heart.Text = "Heart"
 Heart.TextColor3 = Color3.fromRGB(255, 255, 255)
 Heart.TextScaled = true
 Heart.TextSize = 14.000
 Heart.TextWrapped = true
-Heart.MouseButton1Up:connect(function()
-	pl = game.Players.LocalPlayer
-	s = pl.Backpack:GetChildren()
-	s0 = {}
-	for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
-	-----------
-	s0[1].Grip = CFrame.new(0, 0, 0)
-	s0[1].Parent = pl.Character
-	s0[2].Grip = CFrame.new(0, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[2].Parent = pl.Character
-	s0[3].Grip = CFrame.new(2, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[3].Parent = pl.Character
-	s0[4].Grip = CFrame.new(1, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[4].Parent = pl.Character
-	s0[5].Grip = CFrame.new(0, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[5].Parent = pl.Character
-	s0[6].Grip = CFrame.new(3, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[6].Parent = pl.Character
-	s0[7].Grip = CFrame.new(-1, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[7].Parent = pl.Character
-	s0[8].Grip = CFrame.new(2, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[8].Parent = pl.Character
-	s0[9].Grip = CFrame.new(0, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[9].Parent = pl.Character
-	s0[10].Grip = CFrame.new(1, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[10].Parent = pl.Character
-	s0[11].Grip = CFrame.new(0, -0.699999988, -0.300000012, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[11].Parent = pl.Character
-	
-end)
 
 Sqare.Name = "Sqare"
 Sqare.Parent = GunMaker
 Sqare.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 Sqare.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Sqare.BorderSizePixel = 0
-Sqare.Position = UDim2.new(0.0015009226, 0, 0.329649538, 0)
-Sqare.Size = UDim2.new(0, 409, 0, 34)
+Sqare.Position = UDim2.new(0.783599079, 0, 0.701754391, 0)
+Sqare.Size = UDim2.new(0, 95, 0, 48)
 Sqare.Font = Enum.Font.SourceSans
 Sqare.Text = "Sqare"
 Sqare.TextColor3 = Color3.fromRGB(255, 255, 255)
 Sqare.TextScaled = true
 Sqare.TextSize = 14.000
 Sqare.TextWrapped = true
-Sqare.MouseButton1Up:connect(function()
-	pl = game.Players.LocalPlayer
-	s = pl.Backpack:GetChildren()
-	s0 = {}
-	for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
-	-----------
-	s0[1].Grip = CFrame.new(0, 0, 0)
-	s0[1].Parent = pl.Character
-	s0[2].Grip = CFrame.new(0, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[2].Parent = pl.Character
-	s0[3].Grip = CFrame.new(1, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[3].Parent = pl.Character
-	s0[4].Grip = CFrame.new(2, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[4].Parent = pl.Character
-	s0[5].Grip = CFrame.new(3, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[5].Parent = pl.Character
-	s0[6].Grip = CFrame.new(3, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[6].Parent = pl.Character
-	s0[7].Grip = CFrame.new(3, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[7].Parent = pl.Character
-	s0[8].Grip = CFrame.new(0, -0.699999988, -0.300000012, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[8].Parent = pl.Character
-	s0[9].Grip = CFrame.new(0, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[9].Parent = pl.Character
-	s0[10].Grip = CFrame.new(0, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[10].Parent = pl.Character
-	s0[11].Grip = CFrame.new(1, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[11].Parent = pl.Character
-	s0[12].Grip = CFrame.new(2, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[12].Parent = pl.Character
-	s0[13].Grip = CFrame.new(3, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[13].Parent = pl.Character
-
-end)
 
 DckText.Name = "D#ck Text"
 DckText.Parent = GunMaker
 DckText.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
 DckText.BorderColor3 = Color3.fromRGB(0, 0, 0)
 DckText.BorderSizePixel = 0
-DckText.Position = UDim2.new(0.0015009226, 0, 0.39527002, 0)
-DckText.Size = UDim2.new(0, 409, 0, 34)
+DckText.Position = UDim2.new(0.783599079, 0, 0.842105269, 0)
+DckText.Size = UDim2.new(0, 95, 0, 48)
 DckText.Font = Enum.Font.SourceSans
 DckText.Text = "D#ck Text"
 DckText.TextColor3 = Color3.fromRGB(255, 255, 255)
 DckText.TextScaled = true
 DckText.TextSize = 14.000
 DckText.TextWrapped = true
-DckText.MouseButton1Up:connect(function()
-	pl = game.Players.LocalPlayer
-	s = pl.Backpack:GetChildren()
-	s0 = {}
-	for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
-	-----------
-	s0[1].Grip = CFrame.new(0, 0, 0)
-	s0[1].Parent = pl.Character
-	s0[2].Grip = CFrame.new(-2, 0.299999952, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[2].Parent = pl.Character
-	s0[3].Grip = CFrame.new(-2, 0.299999952, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[3].Parent = pl.Character
-	s0[4].Grip = CFrame.new(-2, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[4].Parent = pl.Character
-	s0[5].Grip = CFrame.new(-2, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[5].Parent = pl.Character
-	s0[6].Grip = CFrame.new(-1, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[6].Parent = pl.Character
-	s0[7].Grip = CFrame.new(-1, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[7].Parent = pl.Character
-	s0[8].Grip = CFrame.new(0, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[8].Parent = pl.Character
-	s0[9].Grip = CFrame.new(0, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[9].Parent = pl.Character
-	s0[10].Grip = CFrame.new(2, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[10].Parent = pl.Character
-	s0[11].Grip = CFrame.new(2, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[11].Parent = pl.Character
-	s0[12].Grip = CFrame.new(5, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[12].Parent = pl.Character
-	s0[13].Grip = CFrame.new(2, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[13].Parent = pl.Character
-	s0[14].Grip = CFrame.new(4, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[14].Parent = pl.Character
-	s0[15].Grip = CFrame.new(4, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[15].Parent = pl.Character
-	s0[16].Grip = CFrame.new(4, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[16].Parent = pl.Character
-	s0[17].Grip = CFrame.new(4, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[17].Parent = pl.Character
-	s0[18].Grip = CFrame.new(5, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[18].Parent = pl.Character
-	s0[19].Grip = CFrame.new(6, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[19].Parent = pl.Character
-	s0[20].Grip = CFrame.new(6, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[20].Parent = pl.Character
-	s0[21].Grip = CFrame.new(8, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[21].Parent = pl.Character
-	s0[22].Grip = CFrame.new(8, 0.299999952, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[22].Parent = pl.Character
-	s0[23].Grip = CFrame.new(8, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[23].Parent = pl.Character
-	s0[24].Grip = CFrame.new(9, 0.300000012, -4.5, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[24].Parent = pl.Character
-	s0[25].Grip = CFrame.new(9.5, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[25].Parent = pl.Character
-	s0[26].Grip = CFrame.new(10, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[26].Parent = pl.Character
-	s0[27].Grip = CFrame.new(9.5, 0.300000012, -4, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[27].Parent = pl.Character
-	s0[28].Grip = CFrame.new(10, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[28].Parent = pl.Character
-	s0[29].Grip = CFrame.new(8, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
-	s0[29].Parent = pl.Character
+
+UIListLayout.Parent = GunMaker
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+Maker_2.Name = "Maker"
+Maker_2.Parent = MainFrame
+Maker_2.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+Maker_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Maker_2.BorderSizePixel = 0
+Maker_2.Position = UDim2.new(0.147286847, 0, 0.05785124, 0)
+Maker_2.Size = UDim2.new(0, 343, 0, 336)
+Maker_2.Visible = false
+
+_1.Name = "1"
+_1.Parent = Maker_2
+_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_1.BorderSizePixel = 0
+_1.Position = UDim2.new(-4.85790006e-05, 0, 0.907881081, 0)
+_1.Size = UDim2.new(0, 30, 0, 30)
+_1.Font = Enum.Font.SourceSans
+_1.Text = ""
+_1.TextColor3 = Color3.fromRGB(0, 0, 0)
+_1.TextSize = 14.000
+
+_2.Name = "2"
+_2.Parent = Maker_2
+_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2.BorderSizePixel = 0
+_2.Position = UDim2.new(0.0900000036, 0, 0.907999992, 0)
+_2.Size = UDim2.new(0, 30, 0, 30)
+_2.Font = Enum.Font.SourceSans
+_2.Text = ""
+_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+_2.TextSize = 14.000
+
+_3.Name = "3"
+_3.Parent = Maker_2
+_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_3.BorderSizePixel = 0
+_3.Position = UDim2.new(0.180000007, 0, 0.907999992, 0)
+_3.Size = UDim2.new(0, 30, 0, 30)
+_3.Font = Enum.Font.SourceSans
+_3.Text = ""
+_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+_3.TextSize = 14.000
+
+_4.Name = "4"
+_4.Parent = Maker_2
+_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_4.BorderSizePixel = 0
+_4.Position = UDim2.new(0.270999998, 0, 0.907999992, 0)
+_4.Size = UDim2.new(0, 30, 0, 30)
+_4.Font = Enum.Font.SourceSans
+_4.Text = ""
+_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+_4.TextSize = 14.000
+
+_5.Name = "5"
+_5.Parent = Maker_2
+_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_5.BorderSizePixel = 0
+_5.Position = UDim2.new(0.361000001, 0, 0.907999992, 0)
+_5.Size = UDim2.new(0, 30, 0, 30)
+_5.Font = Enum.Font.SourceSans
+_5.Text = ""
+_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+_5.TextSize = 14.000
+
+_7.Name = "7"
+_7.Parent = Maker_2
+_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_7.BorderSizePixel = 0
+_7.Position = UDim2.new(0.541999996, 0, 0.907999992, 0)
+_7.Size = UDim2.new(0, 30, 0, 30)
+_7.Font = Enum.Font.SourceSans
+_7.Text = ""
+_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+_7.TextSize = 14.000
+
+_6.Name = "6"
+_6.Parent = Maker_2
+_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_6.BorderSizePixel = 0
+_6.Position = UDim2.new(0.451000005, 0, 0.907999992, 0)
+_6.Size = UDim2.new(0, 30, 0, 30)
+_6.Font = Enum.Font.SourceSans
+_6.Text = ""
+_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+_6.TextSize = 14.000
+
+_8.Name = "8"
+_8.Parent = Maker_2
+_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_8.BorderSizePixel = 0
+_8.Position = UDim2.new(0.633000016, 0, 0.907999992, 0)
+_8.Size = UDim2.new(0, 30, 0, 30)
+_8.Font = Enum.Font.SourceSans
+_8.Text = ""
+_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+_8.TextSize = 14.000
+
+_9.Name = "9"
+_9.Parent = Maker_2
+_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_9.BorderSizePixel = 0
+_9.Position = UDim2.new(0.72299999, 0, 0.907999992, 0)
+_9.Size = UDim2.new(0, 30, 0, 30)
+_9.Font = Enum.Font.SourceSans
+_9.Text = ""
+_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+_9.TextSize = 14.000
+
+_10.Name = "10"
+_10.Parent = Maker_2
+_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_10.BorderSizePixel = 0
+_10.Position = UDim2.new(0.81400001, 0, 0.907999992, 0)
+_10.Size = UDim2.new(0, 30, 0, 30)
+_10.Font = Enum.Font.SourceSans
+_10.Text = ""
+_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+_10.TextSize = 14.000
+
+Frame_2.Parent = Maker_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.979343235, 0, -0.00464875344, 0)
+Frame_2.Size = UDim2.new(0, 7, 0, 336)
+
+Player_2.Name = "Player"
+Player_2.Parent = MainFrame
+Player_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Player_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Player_2.BorderSizePixel = 0
+Player_2.Position = UDim2.new(0.147286817, 0, 0.0303030312, 0)
+Player_2.Size = UDim2.new(0, 440, 0, 352)
+Player_2.Visible = false
+
+Fly.Name = "Fly"
+Fly.Parent = Player_2
+Fly.BackgroundColor3 = Color3.fromRGB(143, 143, 143)
+Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(-0.0022727272, 0, 0.0284090918, 0)
+Fly.Size = UDim2.new(0, 313, 0, 34)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+
+ToggleButton_2.Name = "ToggleButton"
+ToggleButton_2.Parent = Fly
+ToggleButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToggleButton_2.BorderSizePixel = 0
+ToggleButton_2.Position = UDim2.new(0.795492053, 0, 0.0882352963, 0)
+ToggleButton_2.Size = UDim2.new(0, 49, 0, 27)
+
+UICorner_4.Parent = ToggleButton_2
+
+On_2.Name = "On"
+On_2.Parent = ToggleButton_2
+On_2.BackgroundColor3 = Color3.fromRGB(0, 255, 8)
+On_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+On_2.BorderSizePixel = 0
+On_2.Position = UDim2.new(0.592951536, 0, 0, 0)
+On_2.Size = UDim2.new(0, 29, 0, 27)
+On_2.Visible = false
+On_2.Font = Enum.Font.SourceSans
+On_2.Text = ""
+On_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+On_2.TextSize = 14.000
+
+UICorner_5.Parent = On_2
+
+Off_2.Name = "Off"
+Off_2.Parent = ToggleButton_2
+Off_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Off_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Off_2.BorderSizePixel = 0
+Off_2.Position = UDim2.new(0.00111482583, 0, 0, 0)
+Off_2.Size = UDim2.new(0, 26, 0, 27)
+Off_2.Font = Enum.Font.SourceSans
+Off_2.Text = ""
+Off_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Off_2.TextSize = 14.000
+
+UICorner_6.Parent = Off_2
+
+Esp_2.Name = "Esp"
+Esp_2.Parent = MainFrame
+Esp_2.Active = true
+Esp_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Esp_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Esp_2.BorderSizePixel = 0
+Esp_2.Position = UDim2.new(0.147286847, 0, 0.05785124, 0)
+Esp_2.Size = UDim2.new(0, 439, 0, 342)
+Esp_2.Visible = false
+
+UIGridLayout_2.Parent = Esp_2
+UIGridLayout_2.FillDirection = Enum.FillDirection.Vertical
+UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_2.CellSize = UDim2.new(0, 400, 0, 30)
+
+-- Scripts:
+
+local function ROHF_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	button = script.Parent
+	window = button.Parent
 	
-end)
+	function onClicked(GUI)
+		window:destroy()
+	end
+	script.Parent.MouseButton1Click:connect(onClicked)
+end
+coroutine.wrap(ROHF_fake_script)()
+local function JSGHT_fake_script() -- Off.LocalScript 
+	local script = Instance.new('LocalScript', Off)
 
-TogglesFrame.Name = "TogglesFrame"
-TogglesFrame.Parent = MainFrame
-TogglesFrame.Active = true
-TogglesFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TogglesFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TogglesFrame.BorderSizePixel = 0
-TogglesFrame.Position = UDim2.new(0.147286847, 0, 0.05785124, 0)
-TogglesFrame.Size = UDim2.new(0, 439, 0, 342)
-TogglesFrame.Visible = true
+	local RS = game:GetService("RunService")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local GunDrop = RS.RenderStepped:Connect(function()
+	
+			local args = {
+				[1] = true
+			}
+	
+			game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("FakeGun"):FireServer(unpack(args))
+	
+			for _, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if v:IsA("Tool") then
+					v.Parent = workspace
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(JSGHT_fake_script)()
+local function RBMUE_fake_script() -- Off.LocalScript 
+	local script = Instance.new('LocalScript', Off)
 
-SpawnTrap.Name = "Spawn Trap"
-SpawnTrap.Parent = TogglesFrame
-SpawnTrap.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
-SpawnTrap.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SpawnTrap.BorderSizePixel = 0
-SpawnTrap.Position = UDim2.new(-0.000776981702, 0, 0.0545892566, 0)
-SpawnTrap.Size = UDim2.new(0, 409, 0, 34)
-SpawnTrap.Font = Enum.Font.SourceSans
-SpawnTrap.Text = "Spawn Trap"
-SpawnTrap.TextColor3 = Color3.fromRGB(255, 255, 255)
-SpawnTrap.TextScaled = true
-SpawnTrap.TextSize = 14.000
-SpawnTrap.TextWrapped = true
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.On.Visible = true
+		script.Parent.Parent.Off.Visible = false
+	end)
+end
+coroutine.wrap(RBMUE_fake_script)()
+local function XJMMXCH_fake_script() -- On.LocalScript 
+	local script = Instance.new('LocalScript', On)
 
-FakeGun.Name = "Fake Gun"
-FakeGun.Parent = TogglesFrame
-FakeGun.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
-FakeGun.BorderColor3 = Color3.fromRGB(0, 0, 0)
-FakeGun.BorderSizePixel = 0
-FakeGun.Position = UDim2.new(-0.000776981702, 0, -0.00183261628, 0)
-FakeGun.Size = UDim2.new(0, 409, 0, 34)
-FakeGun.Font = Enum.Font.SourceSans
-FakeGun.Text = "Fake Gun"
-FakeGun.TextColor3 = Color3.fromRGB(255, 255, 255)
-FakeGun.TextScaled = true
-FakeGun.TextSize = 14.000
-FakeGun.TextWrapped = true
-FakeGun.MouseButton1Up:connect(function()
-	local args = {
-		[1] = true
-	}
+	local RS = game:GetService("RunService")
+	
+	local GunDrop = RS.RenderStepped:Connect(function()
+	
+		local args = {
+			[1] = true
+		}
+	
+		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("FakeGun"):FireServer(unpack(args))
+	
+		for _, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v:IsA("Tool") then
+				v.Parent = workspace
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		GunDrop:Disconnect()
+	end)
+end
+coroutine.wrap(XJMMXCH_fake_script)()
+local function TMRLG_fake_script() -- On.LocalScript 
+	local script = Instance.new('LocalScript', On)
 
-	game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gameplay"):WaitForChild("FakeGun"):FireServer(unpack(args))
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Off.Visible = true
+		script.Parent.Parent.On.Visible =false
+	end)
+end
+coroutine.wrap(TMRLG_fake_script)()
+local function EUCRVX_fake_script() -- Toggles.LocalScript 
+	local script = Instance.new('LocalScript', Toggles)
 
-end)
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.TogglesFrame.Visible = true
+		script.Parent.Parent.Parent.Home.Visible = false
+		script.Parent.Parent.Parent.GunMaker.Visible = false
+		script.Parent.Parent.Parent.Maker.Visible = false
+		script.Parent.Parent.Parent.Player.Visible = false
+		script.Parent.Parent.Parent.Esp.Visible = false
+	end)
+end
+coroutine.wrap(EUCRVX_fake_script)()
+local function YEYV_fake_script() -- Maker.LocalScript 
+	local script = Instance.new('LocalScript', Maker)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.TogglesFrame.Visible = false
+		script.Parent.Parent.Parent.Home.Visible = false
+		script.Parent.Parent.Parent.GunMaker.Visible = true
+		script.Parent.Parent.Parent.Maker.Visible = true
+		script.Parent.Parent.Parent.Player.Visible = false
+		script.Parent.Parent.Parent.Esp.Visible = false
+	end)
+end
+coroutine.wrap(YEYV_fake_script)()
+local function JMBVK_fake_script() -- Main.LocalScript 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.TogglesFrame.Visible = false
+		script.Parent.Parent.Parent.Home.Visible = true
+		script.Parent.Parent.Parent.GunMaker.Visible = false
+		script.Parent.Parent.Parent.Maker.Visible = false
+		script.Parent.Parent.Parent.Player.Visible = false
+		script.Parent.Parent.Parent.Esp.Visible = false
+	end)
+end
+coroutine.wrap(JMBVK_fake_script)()
+local function IOOTY_fake_script() -- Player.LocalScript 
+	local script = Instance.new('LocalScript', Player)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.TogglesFrame.Visible = false
+		script.Parent.Parent.Parent.Home.Visible = false
+		script.Parent.Parent.Parent.GunMaker.Visible = false
+		script.Parent.Parent.Parent.Maker.Visible = false
+		script.Parent.Parent.Parent.Player.Visible = true
+		script.Parent.Parent.Parent.Esp.Visible = false
+	end)
+end
+coroutine.wrap(IOOTY_fake_script)()
+local function OOWMTG_fake_script() -- Esp.LocalScript 
+	local script = Instance.new('LocalScript', Esp)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.TogglesFrame.Visible = false
+		script.Parent.Parent.Parent.Home.Visible = false
+		script.Parent.Parent.Parent.GunMaker.Visible = false
+		script.Parent.Parent.Parent.Maker.Visible = false
+		script.Parent.Parent.Parent.Player.Visible = false
+		script.Parent.Parent.Parent.Esp.Visible = true
+	end)
+end
+coroutine.wrap(OOWMTG_fake_script)()
+local function YOGRYO_fake_script() -- On_2.LocalScript 
+	local script = Instance.new('LocalScript', On_2)
+
+	function mobilefly(speed)
+		local controlModule = require(game.Players.LocalPlayer.PlayerScripts:WaitForChild('PlayerModule'):WaitForChild("ControlModule"))
+		local bv = Instance.new("BodyVelocity")
+		bv.Name = "VelocityHandler"
+		bv.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bv.MaxForce = Vector3.new(0,0,0)
+		bv.Velocity = Vector3.new(0,0,0)
+	
+		local bg = Instance.new("BodyGyro")
+		bg.Name = "GyroHandler"
+		bg.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+		bg.P = 1000
+		bg.D = 50
+	
+	
+		local bg = Instance.new("BodyGyro")
+		bg.Name = "GyroHandler"
+		bg.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+		bg.P = 1000
+		bg.D = 50
+	
+		local Signal1
+		Signal1 = game.Players.LocalPlayer.CharacterAdded:Connect(function(NewChar)
+			local bv = Instance.new("BodyVelocity")
+			bv.Name = "VelocityHandler"
+			bv.Parent = NewChar:WaitForChild("Humanoid").RootPart
+			bv.MaxForce = Vector3.new(0,0,0)
+			bv.Velocity = Vector3.new(0,0,0)
+	
+			local bg = Instance.new("BodyGyro")
+			bg.Name = "GyroHandler"
+			bg.Parent = NewChar:WaitForChild("Humanoid").HumanoidRootPart
+			bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+			bg.P = 1000
+			bg.D = 50
+		end)
+	
+		local camera = game.Workspace.CurrentCamera
+	
+		local Signal2
+		Signal2 = game:GetService"RunService".RenderStepped:Connect(function()
+			if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") and game.Players.LocalPlayer.Character.Humanoid.RootPart and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("VelocityHandler") and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("GyroHandler") then
+	
+				game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.MaxForce = Vector3.new(9e9,9e9,9e9)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.MaxTorque = Vector3.new(9e9,9e9,9e9)
+				game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+	
+				game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.CFrame = camera.CoordinateFrame
+				local direction = controlModule:GetMoveVector()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = Vector3.new()
+				if direction.X > 0 then
+	
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity + camera.CFrame.RightVector*(direction.X*speed)
+				end
+				if direction.X < 0 then
+	
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity + camera.CFrame.RightVector*(direction.X*speed)
+				end
+	
+				if direction.Z > 0 then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity - camera.CFrame.LookVector*(direction.Z*speed)
+				end
+	
+				if direction.Z < 0 then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity - camera.CFrame.LookVector*(direction.Z*speed)
+				end
+			end
+		end)
+	end
+	
+	function unmobilefly()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler:Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler:Destroy()
+		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+		Signal1:Disconnect()
+		Signal2:Disconnect()
+	end
+	
+	local accessories = {}
+	function GodMode()
+	
+		if game.Players.LocalPlayer.Character then
+	
+			if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+	
+				for _, accessory in pairs(game.Players.LocalPlayer.Character.Humanoid:GetAccessories()) do
+	
+					table.insert(accessories, accessory:Clone())
+	
+				end
+	
+				game.Players.LocalPlayer.Character.Humanoid.Name = "deku"
+	
+			end
+	
+			local v = game.Players.LocalPlayer.Character["deku"]:Clone()
+	
+			v.Parent = game.Players.LocalPlayer.Character
+	
+			v.Name = "Humanoid"
+	
+			wait(0.1)
+	
+			game.Players.LocalPlayer.Character["deku"]:Destroy()
+	
+			workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+	
+			for _, accessory in pairs(accessories) do
+	
+				game.Players.LocalPlayer.Character.Humanoid:AddAccessory(accessory)
+	
+			end
+	
+			game.Players.LocalPlayer.Character.Animate.Disabled = true
+	
+			wait(0.1)
+	
+			game.Players.LocalPlayer.Character.Animate.Disabled = false
+	
+		end
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		mobilefly(79)
+	end)
+end
+coroutine.wrap(YOGRYO_fake_script)()
+local function HVHIOTP_fake_script() -- On_2.LocalScript 
+	local script = Instance.new('LocalScript', On_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Off.Visible = true
+		script.Parent.Parent.On.Visible =false
+	end)
+end
+coroutine.wrap(HVHIOTP_fake_script)()
+local function WGMN_fake_script() -- Off_2.LocalScript 
+	local script = Instance.new('LocalScript', Off_2)
+
+	function mobilefly(speed)
+		local controlModule = require(game.Players.LocalPlayer.PlayerScripts:WaitForChild('PlayerModule'):WaitForChild("ControlModule"))
+		local bv = Instance.new("BodyVelocity")
+		bv.Name = "VelocityHandler"
+		bv.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bv.MaxForce = Vector3.new(0,0,0)
+		bv.Velocity = Vector3.new(0,0,0)
+	
+		local bg = Instance.new("BodyGyro")
+		bg.Name = "GyroHandler"
+		bg.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+		bg.P = 1000
+		bg.D = 50
+	
+	
+		local bg = Instance.new("BodyGyro")
+		bg.Name = "GyroHandler"
+		bg.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+		bg.P = 1000
+		bg.D = 50
+	
+		local Signal1
+		Signal1 = game.Players.LocalPlayer.CharacterAdded:Connect(function(NewChar)
+			local bv = Instance.new("BodyVelocity")
+			bv.Name = "VelocityHandler"
+			bv.Parent = NewChar:WaitForChild("Humanoid").RootPart
+			bv.MaxForce = Vector3.new(0,0,0)
+			bv.Velocity = Vector3.new(0,0,0)
+	
+			local bg = Instance.new("BodyGyro")
+			bg.Name = "GyroHandler"
+			bg.Parent = NewChar:WaitForChild("Humanoid").HumanoidRootPart
+			bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+			bg.P = 1000
+			bg.D = 50
+		end)
+	
+		local camera = game.Workspace.CurrentCamera
+	
+		local Signal2
+		Signal2 = game:GetService"RunService".RenderStepped:Connect(function()
+			if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") and game.Players.LocalPlayer.Character.Humanoid.RootPart and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("VelocityHandler") and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("GyroHandler") then
+	
+				game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.MaxForce = Vector3.new(9e9,9e9,9e9)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.MaxTorque = Vector3.new(9e9,9e9,9e9)
+				game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+	
+				game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.CFrame = camera.CoordinateFrame
+				local direction = controlModule:GetMoveVector()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = Vector3.new()
+				if direction.X > 0 then
+	
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity + camera.CFrame.RightVector*(direction.X*speed)
+				end
+				if direction.X < 0 then
+	
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity + camera.CFrame.RightVector*(direction.X*speed)
+				end
+	
+				if direction.Z > 0 then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity - camera.CFrame.LookVector*(direction.Z*speed)
+				end
+	
+				if direction.Z < 0 then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity - camera.CFrame.LookVector*(direction.Z*speed)
+				end
+			end
+		end)
+	end
+	
+	function unmobilefly()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler:Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler:Destroy()
+		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+		Signal1:Disconnect()
+		Signal2:Disconnect()
+	end
+	
+	local accessories = {}
+	function GodMode()
+	
+		if game.Players.LocalPlayer.Character then
+	
+			if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+	
+				for _, accessory in pairs(game.Players.LocalPlayer.Character.Humanoid:GetAccessories()) do
+	
+					table.insert(accessories, accessory:Clone())
+	
+				end
+	
+				game.Players.LocalPlayer.Character.Humanoid.Name = "deku"
+	
+			end
+	
+			local v = game.Players.LocalPlayer.Character["deku"]:Clone()
+	
+			v.Parent = game.Players.LocalPlayer.Character
+	
+			v.Name = "Humanoid"
+	
+			wait(0.1)
+	
+			game.Players.LocalPlayer.Character["deku"]:Destroy()
+	
+			workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+	
+			for _, accessory in pairs(accessories) do
+	
+				game.Players.LocalPlayer.Character.Humanoid:AddAccessory(accessory)
+	
+			end
+	
+			game.Players.LocalPlayer.Character.Animate.Disabled = true
+	
+			wait(0.1)
+	
+			game.Players.LocalPlayer.Character.Animate.Disabled = false
+	
+		end
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		unmobilefly()
+	end)
+end
+coroutine.wrap(WGMN_fake_script)()
+local function WRTBNZW_fake_script() -- Off_2.LocalScript 
+	local script = Instance.new('LocalScript', Off_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.On.Visible = true
+		script.Parent.Parent.Off.Visible = false
+	end)
+end
+coroutine.wrap(WRTBNZW_fake_script)()
