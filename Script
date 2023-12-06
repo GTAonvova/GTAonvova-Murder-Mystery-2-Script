@@ -680,7 +680,6 @@ local function YENU_fake_script() -- On.LocalScript
 	local script = Instance.new('LocalScript', On)
 
 	script.Parent.MouseButton1Click:Connect(function()
-local GunDrop = RS.RenderStepped:Connect(function()
 		GunDrop:Disconnect()
 	end)
 end
