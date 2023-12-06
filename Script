@@ -5,8 +5,8 @@
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
+local Deletegui = Instance.new("TextButton")
 local TextButton = Instance.new("TextButton")
-local TextButton_2 = Instance.new("TextButton")
 local MainFrame = Instance.new("Frame")
 local TogglesFrame = Instance.new("ScrollingFrame")
 local FakeGun = Instance.new("TextButton")
@@ -28,14 +28,14 @@ local Main = Instance.new("TextButton")
 local Player = Instance.new("TextButton")
 local Esp = Instance.new("TextButton")
 local GunMaker = Instance.new("ScrollingFrame")
-local Dck = Instance.new("TextButton")
-local SmallDck = Instance.new("TextButton")
 local BigDck = Instance.new("TextButton")
 local VeryBigDck = Instance.new("TextButton")
 local Heart = Instance.new("TextButton")
 local Sqare = Instance.new("TextButton")
-local DckText = Instance.new("TextButton")
 local UIListLayout = Instance.new("UIListLayout")
+local DckText = Instance.new("TextButton")
+local Dck = Instance.new("TextButton")
+local SmallDck = Instance.new("TextButton")
 local Maker_2 = Instance.new("Frame")
 local _1 = Instance.new("TextButton")
 local _2 = Instance.new("TextButton")
@@ -46,8 +46,48 @@ local _7 = Instance.new("TextButton")
 local _6 = Instance.new("TextButton")
 local _8 = Instance.new("TextButton")
 local _9 = Instance.new("TextButton")
-local _10 = Instance.new("TextButton")
 local Frame_2 = Instance.new("Frame")
+local _10 = Instance.new("TextButton")
+local _29 = Instance.new("TextButton")
+local _27 = Instance.new("TextButton")
+local _28 = Instance.new("TextButton")
+local _26 = Instance.new("TextButton")
+local _25 = Instance.new("TextButton")
+local _24 = Instance.new("TextButton")
+local _23 = Instance.new("TextButton")
+local _20 = Instance.new("TextButton")
+local _22 = Instance.new("TextButton")
+local _30 = Instance.new("TextButton")
+local _19 = Instance.new("TextButton")
+local _18 = Instance.new("TextButton")
+local _17 = Instance.new("TextButton")
+local _16 = Instance.new("TextButton")
+local _15 = Instance.new("TextButton")
+local _14 = Instance.new("TextButton")
+local _13 = Instance.new("TextButton")
+local _12 = Instance.new("TextButton")
+local _11 = Instance.new("TextButton")
+local _21 = Instance.new("TextButton")
+local _31 = Instance.new("TextButton")
+local _40 = Instance.new("TextButton")
+local _32 = Instance.new("TextButton")
+local _33 = Instance.new("TextButton")
+local _34 = Instance.new("TextButton")
+local _35 = Instance.new("TextButton")
+local _36 = Instance.new("TextButton")
+local _37 = Instance.new("TextButton")
+local _38 = Instance.new("TextButton")
+local _39 = Instance.new("TextButton")
+local _41 = Instance.new("TextButton")
+local _50 = Instance.new("TextButton")
+local _42 = Instance.new("TextButton")
+local _43 = Instance.new("TextButton")
+local _44 = Instance.new("TextButton")
+local _45 = Instance.new("TextButton")
+local _46 = Instance.new("TextButton")
+local _47 = Instance.new("TextButton")
+local _48 = Instance.new("TextButton")
+local _49 = Instance.new("TextButton")
 local Player_2 = Instance.new("Frame")
 local Fly = Instance.new("TextLabel")
 local ToggleButton_2 = Instance.new("Frame")
@@ -58,11 +98,9 @@ local Off_2 = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local Esp_2 = Instance.new("ScrollingFrame")
 local UIGridLayout_2 = Instance.new("UIGridLayout")
+local TextButton2 = Instance.new("TextButton")
 
 --Properties:
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -73,33 +111,32 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.169856459, 0, 0.134538159, 0)
 Frame.Size = UDim2.new(0, 516, 0, 21)
-Frame.Active = true
-Frame.Draggable = true
+
+Deletegui.Name = "Deletegui"
+Deletegui.Parent = Frame
+Deletegui.BackgroundColor3 = Color3.fromRGB(181, 0, 0)
+Deletegui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Deletegui.BorderSizePixel = 0
+Deletegui.Position = UDim2.new(0.941118598, 0, -0.0083189467, 0)
+Deletegui.Size = UDim2.new(0, 30, 0, 21)
+Deletegui.Font = Enum.Font.SourceSans
+Deletegui.Text = "X"
+Deletegui.TextColor3 = Color3.fromRGB(0, 0, 0)
+Deletegui.TextSize = 14.000
 
 TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(181, 0, 0)
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.941118598, 0, -0.0083189467, 0)
-TextButton.Size = UDim2.new(0, 30, 0, 21)
+TextButton.Position = UDim2.new(0.870154977, 0, -0.0476190485, 0)
+TextButton.Size = UDim2.new(0, 36, 0, 21)
 TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "X"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Text = "-"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
 TextButton.TextSize = 14.000
-
-TextButton_2.Parent = Frame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.BackgroundTransparency = 1.000
-TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.870154977, 0, -0.0476190485, 0)
-TextButton_2.Size = UDim2.new(0, 36, 0, 21)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "-"
-TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
+TextButton.TextWrapped = true
 
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = Frame
@@ -315,34 +352,6 @@ GunMaker.Position = UDim2.new(0.147286847, 0, 0.05785124, 0)
 GunMaker.Size = UDim2.new(0, 439, 0, 342)
 GunMaker.Visible = false
 
-Dck.Name = "D#ck"
-Dck.Parent = GunMaker
-Dck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
-Dck.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Dck.BorderSizePixel = 0
-Dck.Position = UDim2.new(0.783599079, 0, 0, 0)
-Dck.Size = UDim2.new(0, 95, 0, 48)
-Dck.Font = Enum.Font.SourceSans
-Dck.Text = "D#ck"
-Dck.TextColor3 = Color3.fromRGB(255, 255, 255)
-Dck.TextScaled = true
-Dck.TextSize = 14.000
-Dck.TextWrapped = true
-
-SmallDck.Name = "Small D#ck"
-SmallDck.Parent = GunMaker
-SmallDck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
-SmallDck.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SmallDck.BorderSizePixel = 0
-SmallDck.Position = UDim2.new(0.783599079, 0, 0.140350878, 0)
-SmallDck.Size = UDim2.new(0, 95, 0, 48)
-SmallDck.Font = Enum.Font.SourceSans
-SmallDck.Text = "Small D#ck"
-SmallDck.TextColor3 = Color3.fromRGB(255, 255, 255)
-SmallDck.TextScaled = true
-SmallDck.TextSize = 14.000
-SmallDck.TextWrapped = true
-
 BigDck.Name = "Big D#ck"
 BigDck.Parent = GunMaker
 BigDck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
@@ -399,6 +408,10 @@ Sqare.TextScaled = true
 Sqare.TextSize = 14.000
 Sqare.TextWrapped = true
 
+UIListLayout.Parent = GunMaker
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
 DckText.Name = "D#ck Text"
 DckText.Parent = GunMaker
 DckText.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
@@ -413,9 +426,33 @@ DckText.TextScaled = true
 DckText.TextSize = 14.000
 DckText.TextWrapped = true
 
-UIListLayout.Parent = GunMaker
-UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+Dck.Name = "D#ck"
+Dck.Parent = GunMaker
+Dck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+Dck.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Dck.BorderSizePixel = 0
+Dck.Position = UDim2.new(0.783599079, 0, 0, 0)
+Dck.Size = UDim2.new(0, 95, 0, 48)
+Dck.Font = Enum.Font.SourceSans
+Dck.Text = "D#ck"
+Dck.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dck.TextScaled = true
+Dck.TextSize = 14.000
+Dck.TextWrapped = true
+
+SmallDck.Name = "Small D#ck"
+SmallDck.Parent = GunMaker
+SmallDck.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+SmallDck.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SmallDck.BorderSizePixel = 0
+SmallDck.Position = UDim2.new(0.783599079, 0, 0.140350878, 0)
+SmallDck.Size = UDim2.new(0, 95, 0, 48)
+SmallDck.Font = Enum.Font.SourceSans
+SmallDck.Text = "Small D#ck"
+SmallDck.TextColor3 = Color3.fromRGB(255, 255, 255)
+SmallDck.TextScaled = true
+SmallDck.TextSize = 14.000
+SmallDck.TextWrapped = true
 
 Maker_2.Name = "Maker"
 Maker_2.Parent = MainFrame
@@ -534,6 +571,13 @@ _9.Text = ""
 _9.TextColor3 = Color3.fromRGB(0, 0, 0)
 _9.TextSize = 14.000
 
+Frame_2.Parent = Maker_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.979343235, 0, -0.00464875344, 0)
+Frame_2.Size = UDim2.new(0, 7, 0, 336)
+
 _10.Name = "10"
 _10.Parent = Maker_2
 _10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -546,12 +590,485 @@ _10.Text = ""
 _10.TextColor3 = Color3.fromRGB(0, 0, 0)
 _10.TextSize = 14.000
 
-Frame_2.Parent = Maker_2
-Frame_2.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
-Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(0.979343235, 0, -0.00464875344, 0)
-Frame_2.Size = UDim2.new(0, 7, 0, 336)
+_29.Name = "29"
+_29.Parent = Maker_2
+_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_29.BorderSizePixel = 0
+_29.Position = UDim2.new(0.72300005, 0, 0.723476231, 0)
+_29.Size = UDim2.new(0, 30, 0, 30)
+_29.Font = Enum.Font.SourceSans
+_29.Text = ""
+_29.TextColor3 = Color3.fromRGB(0, 0, 0)
+_29.TextSize = 14.000
+
+_27.Name = "27"
+_27.Parent = Maker_2
+_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_27.BorderSizePixel = 0
+_27.Position = UDim2.new(0.541999996, 0, 0.723476231, 0)
+_27.Size = UDim2.new(0, 30, 0, 30)
+_27.Font = Enum.Font.SourceSans
+_27.Text = ""
+_27.TextColor3 = Color3.fromRGB(0, 0, 0)
+_27.TextSize = 14.000
+
+_28.Name = "28"
+_28.Parent = Maker_2
+_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_28.BorderSizePixel = 0
+_28.Position = UDim2.new(0.633000076, 0, 0.723476231, 0)
+_28.Size = UDim2.new(0, 30, 0, 30)
+_28.Font = Enum.Font.SourceSans
+_28.Text = ""
+_28.TextColor3 = Color3.fromRGB(0, 0, 0)
+_28.TextSize = 14.000
+
+_26.Name = "26"
+_26.Parent = Maker_2
+_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_26.BorderSizePixel = 0
+_26.Position = UDim2.new(0.450999975, 0, 0.723476231, 0)
+_26.Size = UDim2.new(0, 30, 0, 30)
+_26.Font = Enum.Font.SourceSans
+_26.Text = ""
+_26.TextColor3 = Color3.fromRGB(0, 0, 0)
+_26.TextSize = 14.000
+
+_25.Name = "25"
+_25.Parent = Maker_2
+_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_25.BorderSizePixel = 0
+_25.Position = UDim2.new(0.361000001, 0, 0.723476231, 0)
+_25.Size = UDim2.new(0, 30, 0, 30)
+_25.Font = Enum.Font.SourceSans
+_25.Text = ""
+_25.TextColor3 = Color3.fromRGB(0, 0, 0)
+_25.TextSize = 14.000
+
+_24.Name = "24"
+_24.Parent = Maker_2
+_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_24.BorderSizePixel = 0
+_24.Position = UDim2.new(0.270999998, 0, 0.723476231, 0)
+_24.Size = UDim2.new(0, 30, 0, 30)
+_24.Font = Enum.Font.SourceSans
+_24.Text = ""
+_24.TextColor3 = Color3.fromRGB(0, 0, 0)
+_24.TextSize = 14.000
+
+_23.Name = "23"
+_23.Parent = Maker_2
+_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_23.BorderSizePixel = 0
+_23.Position = UDim2.new(0.179999977, 0, 0.723476231, 0)
+_23.Size = UDim2.new(0, 30, 0, 30)
+_23.Font = Enum.Font.SourceSans
+_23.Text = ""
+_23.TextColor3 = Color3.fromRGB(0, 0, 0)
+_23.TextSize = 14.000
+
+_20.Name = "20"
+_20.Parent = Maker_2
+_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_20.BorderSizePixel = 0
+_20.Position = UDim2.new(0.81400007, 0, 0.815738142, 0)
+_20.Size = UDim2.new(0, 30, 0, 30)
+_20.Font = Enum.Font.SourceSans
+_20.Text = ""
+_20.TextColor3 = Color3.fromRGB(0, 0, 0)
+_20.TextSize = 14.000
+
+_22.Name = "22"
+_22.Parent = Maker_2
+_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_22.BorderSizePixel = 0
+_22.Position = UDim2.new(0.0899999887, 0, 0.723476231, 0)
+_22.Size = UDim2.new(0, 30, 0, 30)
+_22.Font = Enum.Font.SourceSans
+_22.Text = ""
+_22.TextColor3 = Color3.fromRGB(0, 0, 0)
+_22.TextSize = 14.000
+
+_30.Name = "30"
+_30.Parent = Maker_2
+_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_30.BorderSizePixel = 0
+_30.Position = UDim2.new(0.81400007, 0, 0.723476231, 0)
+_30.Size = UDim2.new(0, 30, 0, 30)
+_30.Font = Enum.Font.SourceSans
+_30.Text = ""
+_30.TextColor3 = Color3.fromRGB(0, 0, 0)
+_30.TextSize = 14.000
+
+_19.Name = "19"
+_19.Parent = Maker_2
+_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_19.BorderSizePixel = 0
+_19.Position = UDim2.new(0.72300005, 0, 0.815738142, 0)
+_19.Size = UDim2.new(0, 30, 0, 30)
+_19.Font = Enum.Font.SourceSans
+_19.Text = ""
+_19.TextColor3 = Color3.fromRGB(0, 0, 0)
+_19.TextSize = 14.000
+
+_18.Name = "18"
+_18.Parent = Maker_2
+_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_18.BorderSizePixel = 0
+_18.Position = UDim2.new(0.633000076, 0, 0.815738142, 0)
+_18.Size = UDim2.new(0, 30, 0, 30)
+_18.Font = Enum.Font.SourceSans
+_18.Text = ""
+_18.TextColor3 = Color3.fromRGB(0, 0, 0)
+_18.TextSize = 14.000
+
+_17.Name = "17"
+_17.Parent = Maker_2
+_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_17.BorderSizePixel = 0
+_17.Position = UDim2.new(0.541999996, 0, 0.815738142, 0)
+_17.Size = UDim2.new(0, 30, 0, 30)
+_17.Font = Enum.Font.SourceSans
+_17.Text = ""
+_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+_17.TextSize = 14.000
+
+_16.Name = "16"
+_16.Parent = Maker_2
+_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_16.BorderSizePixel = 0
+_16.Position = UDim2.new(0.450999975, 0, 0.815738142, 0)
+_16.Size = UDim2.new(0, 30, 0, 30)
+_16.Font = Enum.Font.SourceSans
+_16.Text = ""
+_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+_16.TextSize = 14.000
+
+_15.Name = "15"
+_15.Parent = Maker_2
+_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_15.BorderSizePixel = 0
+_15.Position = UDim2.new(0.361000001, 0, 0.815738142, 0)
+_15.Size = UDim2.new(0, 30, 0, 30)
+_15.Font = Enum.Font.SourceSans
+_15.Text = ""
+_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+_15.TextSize = 14.000
+
+_14.Name = "14"
+_14.Parent = Maker_2
+_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_14.BorderSizePixel = 0
+_14.Position = UDim2.new(0.270999998, 0, 0.815738142, 0)
+_14.Size = UDim2.new(0, 30, 0, 30)
+_14.Font = Enum.Font.SourceSans
+_14.Text = ""
+_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+_14.TextSize = 14.000
+
+_13.Name = "13"
+_13.Parent = Maker_2
+_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_13.BorderSizePixel = 0
+_13.Position = UDim2.new(0.179999977, 0, 0.815738142, 0)
+_13.Size = UDim2.new(0, 30, 0, 30)
+_13.Font = Enum.Font.SourceSans
+_13.Text = ""
+_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+_13.TextSize = 14.000
+
+_12.Name = "12"
+_12.Parent = Maker_2
+_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_12.BorderSizePixel = 0
+_12.Position = UDim2.new(0.0899999887, 0, 0.815738142, 0)
+_12.Size = UDim2.new(0, 30, 0, 30)
+_12.Font = Enum.Font.SourceSans
+_12.Text = ""
+_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+_12.TextSize = 14.000
+
+_11.Name = "11"
+_11.Parent = Maker_2
+_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_11.BorderSizePixel = 0
+_11.Position = UDim2.new(-4.85790006e-05, 0, 0.815619171, 0)
+_11.Size = UDim2.new(0, 30, 0, 30)
+_11.Font = Enum.Font.SourceSans
+_11.Text = ""
+_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+_11.TextSize = 14.000
+
+_21.Name = "21"
+_21.Parent = Maker_2
+_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_21.BorderSizePixel = 0
+_21.Position = UDim2.new(-4.85790006e-05, 0, 0.72335726, 0)
+_21.Size = UDim2.new(0, 30, 0, 30)
+_21.Font = Enum.Font.SourceSans
+_21.Text = ""
+_21.TextColor3 = Color3.fromRGB(0, 0, 0)
+_21.TextSize = 14.000
+
+_31.Name = "31"
+_31.Parent = Maker_2
+_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_31.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_31.BorderSizePixel = 0
+_31.Position = UDim2.new(-4.85790006e-05, 0, 0.63109535, 0)
+_31.Size = UDim2.new(0, 30, 0, 30)
+_31.Font = Enum.Font.SourceSans
+_31.Text = ""
+_31.TextColor3 = Color3.fromRGB(0, 0, 0)
+_31.TextSize = 14.000
+
+_40.Name = "40"
+_40.Parent = Maker_2
+_40.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_40.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_40.BorderSizePixel = 0
+_40.Position = UDim2.new(0.81400007, 0, 0.631214321, 0)
+_40.Size = UDim2.new(0, 30, 0, 30)
+_40.Font = Enum.Font.SourceSans
+_40.Text = ""
+_40.TextColor3 = Color3.fromRGB(0, 0, 0)
+_40.TextSize = 14.000
+
+_32.Name = "32"
+_32.Parent = Maker_2
+_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_32.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_32.BorderSizePixel = 0
+_32.Position = UDim2.new(0.0899999887, 0, 0.631214321, 0)
+_32.Size = UDim2.new(0, 30, 0, 30)
+_32.Font = Enum.Font.SourceSans
+_32.Text = ""
+_32.TextColor3 = Color3.fromRGB(0, 0, 0)
+_32.TextSize = 14.000
+
+_33.Name = "33"
+_33.Parent = Maker_2
+_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_33.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_33.BorderSizePixel = 0
+_33.Position = UDim2.new(0.179999977, 0, 0.631214321, 0)
+_33.Size = UDim2.new(0, 30, 0, 30)
+_33.Font = Enum.Font.SourceSans
+_33.Text = ""
+_33.TextColor3 = Color3.fromRGB(0, 0, 0)
+_33.TextSize = 14.000
+
+_34.Name = "34"
+_34.Parent = Maker_2
+_34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_34.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_34.BorderSizePixel = 0
+_34.Position = UDim2.new(0.270999998, 0, 0.631214321, 0)
+_34.Size = UDim2.new(0, 30, 0, 30)
+_34.Font = Enum.Font.SourceSans
+_34.Text = ""
+_34.TextColor3 = Color3.fromRGB(0, 0, 0)
+_34.TextSize = 14.000
+
+_35.Name = "35"
+_35.Parent = Maker_2
+_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_35.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_35.BorderSizePixel = 0
+_35.Position = UDim2.new(0.361000001, 0, 0.631214321, 0)
+_35.Size = UDim2.new(0, 30, 0, 30)
+_35.Font = Enum.Font.SourceSans
+_35.Text = ""
+_35.TextColor3 = Color3.fromRGB(0, 0, 0)
+_35.TextSize = 14.000
+
+_36.Name = "36"
+_36.Parent = Maker_2
+_36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_36.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_36.BorderSizePixel = 0
+_36.Position = UDim2.new(0.450999975, 0, 0.631214321, 0)
+_36.Size = UDim2.new(0, 30, 0, 30)
+_36.Font = Enum.Font.SourceSans
+_36.Text = ""
+_36.TextColor3 = Color3.fromRGB(0, 0, 0)
+_36.TextSize = 14.000
+
+_37.Name = "37"
+_37.Parent = Maker_2
+_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_37.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_37.BorderSizePixel = 0
+_37.Position = UDim2.new(0.541999996, 0, 0.631214321, 0)
+_37.Size = UDim2.new(0, 30, 0, 30)
+_37.Font = Enum.Font.SourceSans
+_37.Text = ""
+_37.TextColor3 = Color3.fromRGB(0, 0, 0)
+_37.TextSize = 14.000
+
+_38.Name = "38"
+_38.Parent = Maker_2
+_38.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_38.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_38.BorderSizePixel = 0
+_38.Position = UDim2.new(0.633000076, 0, 0.631214321, 0)
+_38.Size = UDim2.new(0, 30, 0, 30)
+_38.Font = Enum.Font.SourceSans
+_38.Text = ""
+_38.TextColor3 = Color3.fromRGB(0, 0, 0)
+_38.TextSize = 14.000
+
+_39.Name = "39"
+_39.Parent = Maker_2
+_39.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_39.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_39.BorderSizePixel = 0
+_39.Position = UDim2.new(0.72300005, 0, 0.631214321, 0)
+_39.Size = UDim2.new(0, 30, 0, 30)
+_39.Font = Enum.Font.SourceSans
+_39.Text = ""
+_39.TextColor3 = Color3.fromRGB(0, 0, 0)
+_39.TextSize = 14.000
+
+_41.Name = "41"
+_41.Parent = Maker_2
+_41.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_41.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_41.BorderSizePixel = 0
+_41.Position = UDim2.new(-4.85790006e-05, 0, 0.538833439, 0)
+_41.Size = UDim2.new(0, 30, 0, 30)
+_41.Font = Enum.Font.SourceSans
+_41.Text = ""
+_41.TextColor3 = Color3.fromRGB(0, 0, 0)
+_41.TextSize = 14.000
+
+_50.Name = "50"
+_50.Parent = Maker_2
+_50.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_50.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_50.BorderSizePixel = 0
+_50.Position = UDim2.new(0.81400007, 0, 0.53895241, 0)
+_50.Size = UDim2.new(0, 30, 0, 30)
+_50.Font = Enum.Font.SourceSans
+_50.Text = ""
+_50.TextColor3 = Color3.fromRGB(0, 0, 0)
+_50.TextSize = 14.000
+
+_42.Name = "42"
+_42.Parent = Maker_2
+_42.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_42.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_42.BorderSizePixel = 0
+_42.Position = UDim2.new(0.0899999887, 0, 0.53895241, 0)
+_42.Size = UDim2.new(0, 30, 0, 30)
+_42.Font = Enum.Font.SourceSans
+_42.Text = ""
+_42.TextColor3 = Color3.fromRGB(0, 0, 0)
+_42.TextSize = 14.000
+
+_43.Name = "43"
+_43.Parent = Maker_2
+_43.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_43.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_43.BorderSizePixel = 0
+_43.Position = UDim2.new(0.179999977, 0, 0.53895241, 0)
+_43.Size = UDim2.new(0, 30, 0, 30)
+_43.Font = Enum.Font.SourceSans
+_43.Text = ""
+_43.TextColor3 = Color3.fromRGB(0, 0, 0)
+_43.TextSize = 14.000
+
+_44.Name = "44"
+_44.Parent = Maker_2
+_44.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_44.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_44.BorderSizePixel = 0
+_44.Position = UDim2.new(0.270999998, 0, 0.53895241, 0)
+_44.Size = UDim2.new(0, 30, 0, 30)
+_44.Font = Enum.Font.SourceSans
+_44.Text = ""
+_44.TextColor3 = Color3.fromRGB(0, 0, 0)
+_44.TextSize = 14.000
+
+_45.Name = "45"
+_45.Parent = Maker_2
+_45.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_45.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_45.BorderSizePixel = 0
+_45.Position = UDim2.new(0.361000001, 0, 0.53895241, 0)
+_45.Size = UDim2.new(0, 30, 0, 30)
+_45.Font = Enum.Font.SourceSans
+_45.Text = ""
+_45.TextColor3 = Color3.fromRGB(0, 0, 0)
+_45.TextSize = 14.000
+
+_46.Name = "46"
+_46.Parent = Maker_2
+_46.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_46.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_46.BorderSizePixel = 0
+_46.Position = UDim2.new(0.450999975, 0, 0.53895241, 0)
+_46.Size = UDim2.new(0, 30, 0, 30)
+_46.Font = Enum.Font.SourceSans
+_46.Text = ""
+_46.TextColor3 = Color3.fromRGB(0, 0, 0)
+_46.TextSize = 14.000
+
+_47.Name = "47"
+_47.Parent = Maker_2
+_47.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_47.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_47.BorderSizePixel = 0
+_47.Position = UDim2.new(0.541999996, 0, 0.53895241, 0)
+_47.Size = UDim2.new(0, 30, 0, 30)
+_47.Font = Enum.Font.SourceSans
+_47.Text = ""
+_47.TextColor3 = Color3.fromRGB(0, 0, 0)
+_47.TextSize = 14.000
+
+_48.Name = "48"
+_48.Parent = Maker_2
+_48.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_48.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_48.BorderSizePixel = 0
+_48.Position = UDim2.new(0.633000076, 0, 0.53895241, 0)
+_48.Size = UDim2.new(0, 30, 0, 30)
+_48.Font = Enum.Font.SourceSans
+_48.Text = ""
+_48.TextColor3 = Color3.fromRGB(0, 0, 0)
+_48.TextSize = 14.000
+
+_49.Name = "49"
+_49.Parent = Maker_2
+_49.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_49.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_49.BorderSizePixel = 0
+_49.Position = UDim2.new(0.72300005, 0, 0.53895241, 0)
+_49.Size = UDim2.new(0, 30, 0, 30)
+_49.Font = Enum.Font.SourceSans
+_49.Text = ""
+_49.TextColor3 = Color3.fromRGB(0, 0, 0)
+_49.TextSize = 14.000
 
 Player_2.Name = "Player"
 Player_2.Parent = MainFrame
@@ -630,10 +1147,26 @@ UIGridLayout_2.FillDirection = Enum.FillDirection.Vertical
 UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout_2.CellSize = UDim2.new(0, 400, 0, 30)
 
+TextButton2.Name = "TextButton2"
+TextButton2.Parent = Frame
+TextButton2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton2.BackgroundTransparency = 1.000
+TextButton2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.BorderSizePixel = 0
+TextButton2.Position = UDim2.new(0.870154977, 0, -0.0476190485, 0)
+TextButton2.Size = UDim2.new(0, 36, 0, 21)
+TextButton2.Visible = false
+TextButton2.Font = Enum.Font.SourceSans
+TextButton2.Text = "-"
+TextButton2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton2.TextScaled = true
+TextButton2.TextSize = 14.000
+TextButton2.TextWrapped = true
+
 -- Scripts:
 
-local function FOEDNUZ_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
+local function TGLP_fake_script() -- Deletegui.LocalScript 
+	local script = Instance.new('LocalScript', Deletegui)
 
 	button = script.Parent
 	window = button.Parent
@@ -643,8 +1176,18 @@ local function FOEDNUZ_fake_script() -- TextButton.LocalScript
 	end
 	script.Parent.MouseButton1Click:connect(onClicked)
 end
-coroutine.wrap(FOEDNUZ_fake_script)()
-local function EBESN_fake_script() -- Off.LocalScript 
+coroutine.wrap(TGLP_fake_script)()
+local function KFMZMNS_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.parent.Parent.MainFrame.Visible = false
+		script.Parent.Parent.TextButton.Visible = false
+		script.Parent.Parent.TextButton2.Visible = true
+	end)
+end
+coroutine.wrap(KFMZMNS_fake_script)()
+local function IFUVW_fake_script() -- Off.LocalScript 
 	local script = Instance.new('LocalScript', Off)
 
 	local RS = game:GetService("RunService")
@@ -666,8 +1209,8 @@ local function EBESN_fake_script() -- Off.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(EBESN_fake_script)()
-local function WSPPL_fake_script() -- Off.LocalScript 
+coroutine.wrap(IFUVW_fake_script)()
+local function MTMGX_fake_script() -- Off.LocalScript 
 	local script = Instance.new('LocalScript', Off)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -675,16 +1218,18 @@ local function WSPPL_fake_script() -- Off.LocalScript
 		script.Parent.Parent.Off.Visible = false
 	end)
 end
-coroutine.wrap(WSPPL_fake_script)()
-local function YENU_fake_script() -- On.LocalScript 
+coroutine.wrap(MTMGX_fake_script)()
+local function LQJWBQT_fake_script() -- On.LocalScript 
 	local script = Instance.new('LocalScript', On)
 
+	local GunDrop = RS.RenderStepped:Connect(function()
+	
 	script.Parent.MouseButton1Click:Connect(function()
 		GunDrop:Disconnect()
 	end)
 end
-coroutine.wrap(YENU_fake_script)()
-local function TAWQ_fake_script() -- On.LocalScript 
+coroutine.wrap(LQJWBQT_fake_script)()
+local function EHCUI_fake_script() -- On.LocalScript 
 	local script = Instance.new('LocalScript', On)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -692,16 +1237,16 @@ local function TAWQ_fake_script() -- On.LocalScript
 		script.Parent.Parent.On.Visible =false
 	end)
 end
-coroutine.wrap(TAWQ_fake_script)()
-local function RTSS_fake_script() -- SpawnTrap.LocalScript 
+coroutine.wrap(EHCUI_fake_script)()
+local function GCXZ_fake_script() -- SpawnTrap.LocalScript 
 	local script = Instance.new('LocalScript', SpawnTrap)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		game.ReplicatedStorage.TrapSystem.PlaceTrap:InvokeServer(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, -1, 0))
 	end)
 end
-coroutine.wrap(RTSS_fake_script)()
-local function KPUNQWR_fake_script() -- Toggles.LocalScript 
+coroutine.wrap(GCXZ_fake_script)()
+local function BHSE_fake_script() -- Toggles.LocalScript 
 	local script = Instance.new('LocalScript', Toggles)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -713,8 +1258,8 @@ local function KPUNQWR_fake_script() -- Toggles.LocalScript
 		script.Parent.Parent.Parent.Esp.Visible = false
 	end)
 end
-coroutine.wrap(KPUNQWR_fake_script)()
-local function FMOZJTQ_fake_script() -- Maker.LocalScript 
+coroutine.wrap(BHSE_fake_script)()
+local function ASXSUZM_fake_script() -- Maker.LocalScript 
 	local script = Instance.new('LocalScript', Maker)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -726,8 +1271,8 @@ local function FMOZJTQ_fake_script() -- Maker.LocalScript
 		script.Parent.Parent.Parent.Esp.Visible = false
 	end)
 end
-coroutine.wrap(FMOZJTQ_fake_script)()
-local function FKVD_fake_script() -- Main.LocalScript 
+coroutine.wrap(ASXSUZM_fake_script)()
+local function ZOKWC_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -739,8 +1284,8 @@ local function FKVD_fake_script() -- Main.LocalScript
 		script.Parent.Parent.Parent.Esp.Visible = false
 	end)
 end
-coroutine.wrap(FKVD_fake_script)()
-local function IIAC_fake_script() -- Player.LocalScript 
+coroutine.wrap(ZOKWC_fake_script)()
+local function RZUNFAW_fake_script() -- Player.LocalScript 
 	local script = Instance.new('LocalScript', Player)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -752,8 +1297,8 @@ local function IIAC_fake_script() -- Player.LocalScript
 		script.Parent.Parent.Parent.Esp.Visible = false
 	end)
 end
-coroutine.wrap(IIAC_fake_script)()
-local function AOLQMC_fake_script() -- Esp.LocalScript 
+coroutine.wrap(RZUNFAW_fake_script)()
+local function VFRNYDC_fake_script() -- Esp.LocalScript 
 	local script = Instance.new('LocalScript', Esp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -765,16 +1310,953 @@ local function AOLQMC_fake_script() -- Esp.LocalScript
 		script.Parent.Parent.Parent.Esp.Visible = true
 	end)
 end
-coroutine.wrap(AOLQMC_fake_script)()
-local function PAOEZ_fake_script() -- On_2.LocalScript 
-	local script = Instance.new('LocalScript', On_2)
+coroutine.wrap(VFRNYDC_fake_script)()
+local function THTISZM_fake_script() -- BigDck.LocalScript 
+	local script = Instance.new('LocalScript', BigDck)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		unmobilefly()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[1].Grip = CFrame.new(0, 0, 0)
+		s0[1].Parent = pl.Character
+		s0[2].Grip = CFrame.new(1.5, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[2].Parent = pl.Character
+		s0[3].Grip = CFrame.new(1.0, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[3].Parent = pl.Character
+		s0[4].Grip = CFrame.new(2., 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[4].Parent = pl.Character
+		s0[5].Grip = CFrame.new(1.5, -0.700000048, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[5].Parent = pl.Character
+		s0[6].Grip = CFrame.new(1.5, -1.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[6].Parent = pl.Character
+		s0[7].Grip = CFrame.new(1.5, -2.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[7].Parent = pl.Character
+		s0[8].Grip = CFrame.new(1.5, -3.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[8].Parent = pl.Character
+		s0[9].Grip = CFrame.new(1.5, -4.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[9].Parent = pl.Character
+		s0[10].Grip = CFrame.new(1.5, -5.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[10].Parent = pl.Character
 	end)
 end
-coroutine.wrap(PAOEZ_fake_script)()
-local function DSMQFR_fake_script() -- On_2.LocalScript 
+coroutine.wrap(THTISZM_fake_script)()
+local function WXWX_fake_script() -- VeryBigDck.LocalScript 
+	local script = Instance.new('LocalScript', VeryBigDck)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[1].Grip = CFrame.new(0, 0, 0)
+		s0[1].Parent = pl.Character
+		s0[2].Grip = CFrame.new(1.5, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[2].Parent = pl.Character
+		s0[3].Grip = CFrame.new(1.0, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[3].Parent = pl.Character
+		s0[4].Grip = CFrame.new(2., 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[4].Parent = pl.Character
+		s0[5].Grip = CFrame.new(1.5, -0.700000048, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[5].Parent = pl.Character
+		s0[6].Grip = CFrame.new(1.5, -1.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[6].Parent = pl.Character
+		s0[7].Grip = CFrame.new(1.5, -2.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[7].Parent = pl.Character
+		s0[8].Grip = CFrame.new(1.5, -3.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[8].Parent = pl.Character
+		s0[9].Grip = CFrame.new(1.5, -4.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[9].Parent = pl.Character
+		s0[10].Grip = CFrame.new(1.5, -5.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[10].Parent = pl.Character
+		s0[11].Grip = CFrame.new(1.5, -6.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[11].Parent = pl.Character
+		s0[12].Grip = CFrame.new(1.5, -7.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[12].Parent = pl.Character
+		s0[13].Grip = CFrame.new(1.5, -8.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[13].Parent = pl.Character
+		s0[14].Grip = CFrame.new(1.5, -9.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[14].Parent = pl.Character
+		s0[15].Grip = CFrame.new(1.5, -10.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[15].Parent = pl.Character
+	end)
+end
+coroutine.wrap(WXWX_fake_script)()
+local function VIELSC_fake_script() -- Sqare.LocalScript 
+	local script = Instance.new('LocalScript', Sqare)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[1].Grip = CFrame.new(0, 0, 0)
+		s0[1].Parent = pl.Character
+		s0[2].Grip = CFrame.new(0, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[2].Parent = pl.Character
+		s0[3].Grip = CFrame.new(1, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[3].Parent = pl.Character
+		s0[4].Grip = CFrame.new(2, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[4].Parent = pl.Character
+		s0[5].Grip = CFrame.new(3, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[5].Parent = pl.Character
+		s0[6].Grip = CFrame.new(3, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[6].Parent = pl.Character
+		s0[7].Grip = CFrame.new(3, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[7].Parent = pl.Character
+		s0[8].Grip = CFrame.new(0, -0.699999988, -0.300000012, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[8].Parent = pl.Character
+		s0[9].Grip = CFrame.new(0, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[9].Parent = pl.Character
+		s0[10].Grip = CFrame.new(0, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[10].Parent = pl.Character
+		s0[11].Grip = CFrame.new(1, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[11].Parent = pl.Character
+		s0[12].Grip = CFrame.new(2, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[12].Parent = pl.Character
+		s0[13].Grip = CFrame.new(3, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[13].Parent = pl.Character
+	end)
+end
+coroutine.wrap(VIELSC_fake_script)()
+local function WDHPTU_fake_script() -- DckText.LocalScript 
+	local script = Instance.new('LocalScript', DckText)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[1].Grip = CFrame.new(0, 0, 0)
+		s0[1].Parent = pl.Character
+		s0[2].Grip = CFrame.new(-2, 0.299999952, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[2].Parent = pl.Character
+		s0[3].Grip = CFrame.new(-2, 0.299999952, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[3].Parent = pl.Character
+		s0[4].Grip = CFrame.new(-2, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[4].Parent = pl.Character
+		s0[5].Grip = CFrame.new(-2, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[5].Parent = pl.Character
+		s0[6].Grip = CFrame.new(-1, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[6].Parent = pl.Character
+		s0[7].Grip = CFrame.new(-1, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[7].Parent = pl.Character
+		s0[8].Grip = CFrame.new(0, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[8].Parent = pl.Character
+		s0[9].Grip = CFrame.new(0, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[9].Parent = pl.Character
+		s0[10].Grip = CFrame.new(2, 0.300000012, -3.29999995, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[10].Parent = pl.Character
+		s0[11].Grip = CFrame.new(2, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[11].Parent = pl.Character
+		s0[12].Grip = CFrame.new(5, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[12].Parent = pl.Character
+		s0[13].Grip = CFrame.new(2, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[13].Parent = pl.Character
+		s0[14].Grip = CFrame.new(4, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[14].Parent = pl.Character
+		s0[15].Grip = CFrame.new(4, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[15].Parent = pl.Character
+		s0[16].Grip = CFrame.new(4, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[16].Parent = pl.Character
+		s0[17].Grip = CFrame.new(4, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[17].Parent = pl.Character
+		s0[18].Grip = CFrame.new(5, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[18].Parent = pl.Character
+		s0[19].Grip = CFrame.new(6, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[19].Parent = pl.Character
+		s0[20].Grip = CFrame.new(6, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[20].Parent = pl.Character
+		s0[21].Grip = CFrame.new(8, 0.300000012, -4.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[21].Parent = pl.Character
+		s0[22].Grip = CFrame.new(8, 0.299999952, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[22].Parent = pl.Character
+		s0[23].Grip = CFrame.new(8, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[23].Parent = pl.Character
+		s0[24].Grip = CFrame.new(9, 0.300000012, -4.5, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[24].Parent = pl.Character
+		s0[25].Grip = CFrame.new(9.5, 0.300000012, -5.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[25].Parent = pl.Character
+		s0[26].Grip = CFrame.new(10, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[26].Parent = pl.Character
+		s0[27].Grip = CFrame.new(9.5, 0.300000012, -4, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[27].Parent = pl.Character
+		s0[28].Grip = CFrame.new(10, 0.300000012, -3.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[28].Parent = pl.Character
+		s0[29].Grip = CFrame.new(8, 0.300000012, -6.30000019, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[29].Parent = pl.Character
+	end)
+end
+coroutine.wrap(WDHPTU_fake_script)()
+local function EJYI_fake_script() -- Dck.LocalScript 
+	local script = Instance.new('LocalScript', Dck)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[1].Grip = CFrame.new(0, 0, 0)
+		s0[1].Parent = pl.Character
+		s0[2].Grip = CFrame.new(1.5, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[2].Parent = pl.Character
+		s0[3].Grip = CFrame.new(1.0, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[3].Parent = pl.Character
+		s0[4].Grip = CFrame.new(2., 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[4].Parent = pl.Character
+		s0[5].Grip = CFrame.new(1.5, -0.700000048, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[5].Parent = pl.Character
+		s0[6].Grip = CFrame.new(1.5, -1.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[6].Parent = pl.Character
+		s0[7].Grip = CFrame.new(1.5, -2.70000005, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[7].Parent = pl.Character
+	end)
+end
+coroutine.wrap(EJYI_fake_script)()
+local function ZZUOT_fake_script() -- SmallDck.LocalScript 
+	local script = Instance.new('LocalScript', SmallDck)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[1].Grip = CFrame.new(0, 0, 0)
+		s0[1].Parent = pl.Character
+		s0[2].Grip = CFrame.new(1.5, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[2].Parent = pl.Character
+		s0[3].Grip = CFrame.new(1.0, 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[3].Parent = pl.Character
+		s0[4].Grip = CFrame.new(2., 0.300000012, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[4].Parent = pl.Character
+		s0[5].Grip = CFrame.new(1.5, -0.700000048, 1.70000005, 1, 0, 0, 0, 0, -1, 0, 1, 0)
+		s0[5].Parent = pl.Character
+	end)
+end
+coroutine.wrap(ZZUOT_fake_script)()
+local function EJRJZ_fake_script() -- _1.LocalScript 
+	local script = Instance.new('LocalScript', _1)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[1].Grip = CFrame.new(-3, -4, -2)
+		s0[1].Parent = pl.Character
+	end)
+end
+coroutine.wrap(EJRJZ_fake_script)()
+local function WTHBAU_fake_script() -- _2.LocalScript 
+	local script = Instance.new('LocalScript', _2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[2].Grip = CFrame.new(-2, -4, -2)
+		s0[2].Parent = pl.Character
+	end)
+end
+coroutine.wrap(WTHBAU_fake_script)()
+local function FQYGEB_fake_script() -- _3.LocalScript 
+	local script = Instance.new('LocalScript', _3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[3].Grip = CFrame.new(-1, -4, -2)
+		s0[3].Parent = pl.Character
+	end)
+end
+coroutine.wrap(FQYGEB_fake_script)()
+local function SPEZ_fake_script() -- _4.LocalScript 
+	local script = Instance.new('LocalScript', _4)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[4].Grip = CFrame.new(-0, -4, -2)
+		s0[4].Parent = pl.Character
+	end)
+end
+coroutine.wrap(SPEZ_fake_script)()
+local function JYTI_fake_script() -- _5.LocalScript 
+	local script = Instance.new('LocalScript', _5)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[5].Grip = CFrame.new(1, -4, -2)
+		s0[5].Parent = pl.Character
+	end)
+end
+coroutine.wrap(JYTI_fake_script)()
+local function CDXPX_fake_script() -- _7.LocalScript 
+	local script = Instance.new('LocalScript', _7)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[7].Grip = CFrame.new(3, -4, -2)
+		s0[7].Parent = pl.Character
+	end)
+end
+coroutine.wrap(CDXPX_fake_script)()
+local function ZCJOTE_fake_script() -- _6.LocalScript 
+	local script = Instance.new('LocalScript', _6)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[6].Grip = CFrame.new(2, -4, -2)
+		s0[6].Parent = pl.Character
+	end)
+end
+coroutine.wrap(ZCJOTE_fake_script)()
+local function WXMN_fake_script() -- _8.LocalScript 
+	local script = Instance.new('LocalScript', _8)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[8].Grip = CFrame.new(4, -4, -2)
+		s0[8].Parent = pl.Character
+	end)
+end
+coroutine.wrap(WXMN_fake_script)()
+local function KQJINK_fake_script() -- _9.LocalScript 
+	local script = Instance.new('LocalScript', _9)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[9].Grip = CFrame.new(5, -4, -2)
+		s0[9].Parent = pl.Character
+	end)
+end
+coroutine.wrap(KQJINK_fake_script)()
+local function BTHXMF_fake_script() -- _10.LocalScript 
+	local script = Instance.new('LocalScript', _10)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[10].Grip = CFrame.new(6, -4, -2)
+		s0[10].Parent = pl.Character
+	end)
+	
+end
+coroutine.wrap(BTHXMF_fake_script)()
+local function QOQOZKR_fake_script() -- _29.LocalScript 
+	local script = Instance.new('LocalScript', _29)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[29].Grip = CFrame.new(5, -6, -2)
+		s0[29].Parent = pl.Character
+	end)
+end
+coroutine.wrap(QOQOZKR_fake_script)()
+local function CGPRZ_fake_script() -- _27.LocalScript 
+	local script = Instance.new('LocalScript', _27)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[27].Grip = CFrame.new(3, -6, -2)
+		s0[27].Parent = pl.Character
+	end)
+end
+coroutine.wrap(CGPRZ_fake_script)()
+local function XUBOXGT_fake_script() -- _28.LocalScript 
+	local script = Instance.new('LocalScript', _28)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[28].Grip = CFrame.new(4, -6, -2)
+		s0[28].Parent = pl.Character
+	end)
+end
+coroutine.wrap(XUBOXGT_fake_script)()
+local function SBLGC_fake_script() -- _26.LocalScript 
+	local script = Instance.new('LocalScript', _26)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[26].Grip = CFrame.new(2, -6, -2)
+		s0[26].Parent = pl.Character
+	end)
+end
+coroutine.wrap(SBLGC_fake_script)()
+local function FHOOC_fake_script() -- _25.LocalScript 
+	local script = Instance.new('LocalScript', _25)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[25].Grip = CFrame.new(1, -6, -2)
+		s0[25].Parent = pl.Character
+	end)
+end
+coroutine.wrap(FHOOC_fake_script)()
+local function RPWC_fake_script() -- _24.LocalScript 
+	local script = Instance.new('LocalScript', _24)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[24].Grip = CFrame.new(-0, -6, -2)
+		s0[24].Parent = pl.Character
+	end)
+end
+coroutine.wrap(RPWC_fake_script)()
+local function BCYH_fake_script() -- _23.LocalScript 
+	local script = Instance.new('LocalScript', _23)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[23].Grip = CFrame.new(-1, -6, -2)
+		s0[23].Parent = pl.Character
+	end)
+end
+coroutine.wrap(BCYH_fake_script)()
+local function HWJOYWZ_fake_script() -- _20.LocalScript 
+	local script = Instance.new('LocalScript', _20)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[20].Grip = CFrame.new(6, -5, -2)
+		s0[20].Parent = pl.Character
+	end)
+	
+end
+coroutine.wrap(HWJOYWZ_fake_script)()
+local function JLKYAJE_fake_script() -- _22.LocalScript 
+	local script = Instance.new('LocalScript', _22)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[22].Grip = CFrame.new(-2, -6, -2)
+		s0[22].Parent = pl.Character
+	end)
+end
+coroutine.wrap(JLKYAJE_fake_script)()
+local function NUKAAP_fake_script() -- _30.LocalScript 
+	local script = Instance.new('LocalScript', _30)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[30].Grip = CFrame.new(6, -6, -2)
+		s0[30].Parent = pl.Character
+	end)
+	
+end
+coroutine.wrap(NUKAAP_fake_script)()
+local function TXYG_fake_script() -- _19.LocalScript 
+	local script = Instance.new('LocalScript', _19)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[19].Grip = CFrame.new(5, -5, -2)
+		s0[19].Parent = pl.Character
+	end)
+end
+coroutine.wrap(TXYG_fake_script)()
+local function FLSLO_fake_script() -- _18.LocalScript 
+	local script = Instance.new('LocalScript', _18)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[18].Grip = CFrame.new(4, -5, -2)
+		s0[18].Parent = pl.Character
+	end)
+end
+coroutine.wrap(FLSLO_fake_script)()
+local function KNED_fake_script() -- _17.LocalScript 
+	local script = Instance.new('LocalScript', _17)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[17].Grip = CFrame.new(3, -5, -2)
+		s0[17].Parent = pl.Character
+	end)
+end
+coroutine.wrap(KNED_fake_script)()
+local function LZFQBV_fake_script() -- _16.LocalScript 
+	local script = Instance.new('LocalScript', _16)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[16].Grip = CFrame.new(2, -5, -2)
+		s0[16].Parent = pl.Character
+	end)
+end
+coroutine.wrap(LZFQBV_fake_script)()
+local function XKEOXQ_fake_script() -- _15.LocalScript 
+	local script = Instance.new('LocalScript', _15)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[15].Grip = CFrame.new(1, -5, -2)
+		s0[15].Parent = pl.Character
+	end)
+end
+coroutine.wrap(XKEOXQ_fake_script)()
+local function JYOXIU_fake_script() -- _14.LocalScript 
+	local script = Instance.new('LocalScript', _14)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[14].Grip = CFrame.new(-0, -5, -2)
+		s0[14].Parent = pl.Character
+	end)
+end
+coroutine.wrap(JYOXIU_fake_script)()
+local function WQBB_fake_script() -- _13.LocalScript 
+	local script = Instance.new('LocalScript', _13)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[13].Grip = CFrame.new(-1, -5, -2)
+		s0[13].Parent = pl.Character
+	end)
+end
+coroutine.wrap(WQBB_fake_script)()
+local function HFQWGTU_fake_script() -- _12.LocalScript 
+	local script = Instance.new('LocalScript', _12)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[12].Grip = CFrame.new(-2, -5, -2)
+		s0[12].Parent = pl.Character
+	end)
+end
+coroutine.wrap(HFQWGTU_fake_script)()
+local function MYOFT_fake_script() -- _11.LocalScript 
+	local script = Instance.new('LocalScript', _11)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[11].Grip = CFrame.new(-3, -5, -2)
+		s0[11].Parent = pl.Character
+	end)
+end
+coroutine.wrap(MYOFT_fake_script)()
+local function EKLTWZ_fake_script() -- _21.LocalScript 
+	local script = Instance.new('LocalScript', _21)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[21].Grip = CFrame.new(-3, -6, -2)
+		s0[21].Parent = pl.Character
+	end)
+end
+coroutine.wrap(EKLTWZ_fake_script)()
+local function INTLK_fake_script() -- _31.LocalScript 
+	local script = Instance.new('LocalScript', _31)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[31].Grip = CFrame.new(-3, -7, -2)
+		s0[31].Parent = pl.Character
+	end)
+end
+coroutine.wrap(INTLK_fake_script)()
+local function BJCW_fake_script() -- _40.LocalScript 
+	local script = Instance.new('LocalScript', _40)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[40].Grip = CFrame.new(6, -7, -2)
+		s0[40].Parent = pl.Character
+	end)
+	
+end
+coroutine.wrap(BJCW_fake_script)()
+local function HVJFSR_fake_script() -- _32.LocalScript 
+	local script = Instance.new('LocalScript', _32)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[32].Grip = CFrame.new(-2, -7, -2)
+		s0[32].Parent = pl.Character
+	end)
+end
+coroutine.wrap(HVJFSR_fake_script)()
+local function UJCDV_fake_script() -- _33.LocalScript 
+	local script = Instance.new('LocalScript', _33)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[33].Grip = CFrame.new(-1, -7, -2)
+		s0[33].Parent = pl.Character
+	end)
+end
+coroutine.wrap(UJCDV_fake_script)()
+local function EXNBDO_fake_script() -- _34.LocalScript 
+	local script = Instance.new('LocalScript', _34)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[34].Grip = CFrame.new(-0, -7, -2)
+		s0[34].Parent = pl.Character
+	end)
+end
+coroutine.wrap(EXNBDO_fake_script)()
+local function LAMEBBD_fake_script() -- _35.LocalScript 
+	local script = Instance.new('LocalScript', _35)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[35].Grip = CFrame.new(1, -7, -2)
+		s0[35].Parent = pl.Character
+	end)
+end
+coroutine.wrap(LAMEBBD_fake_script)()
+local function TFWR_fake_script() -- _36.LocalScript 
+	local script = Instance.new('LocalScript', _36)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[36].Grip = CFrame.new(2, -7, -2)
+		s0[36].Parent = pl.Character
+	end)
+end
+coroutine.wrap(TFWR_fake_script)()
+local function AXQP_fake_script() -- _37.LocalScript 
+	local script = Instance.new('LocalScript', _37)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[37].Grip = CFrame.new(3, -7, -2)
+		s0[37].Parent = pl.Character
+	end)
+end
+coroutine.wrap(AXQP_fake_script)()
+local function IBOWA_fake_script() -- _38.LocalScript 
+	local script = Instance.new('LocalScript', _38)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[38].Grip = CFrame.new(4, -7, -2)
+		s0[38].Parent = pl.Character
+	end)
+end
+coroutine.wrap(IBOWA_fake_script)()
+local function KCSNSJ_fake_script() -- _39.LocalScript 
+	local script = Instance.new('LocalScript', _39)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[39].Grip = CFrame.new(5, -7, -2)
+		s0[39].Parent = pl.Character
+	end)
+end
+coroutine.wrap(KCSNSJ_fake_script)()
+local function OZXNNQ_fake_script() -- _41.LocalScript 
+	local script = Instance.new('LocalScript', _41)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[41].Grip = CFrame.new(-3, -8, -2)
+		s0[41].Parent = pl.Character
+	end)
+end
+coroutine.wrap(OZXNNQ_fake_script)()
+local function SSUF_fake_script() -- _50.LocalScript 
+	local script = Instance.new('LocalScript', _50)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[50].Grip = CFrame.new(6, -8, -2)
+		s0[50].Parent = pl.Character
+	end)
+	
+end
+coroutine.wrap(SSUF_fake_script)()
+local function YNHSI_fake_script() -- _42.LocalScript 
+	local script = Instance.new('LocalScript', _42)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[42].Grip = CFrame.new(-2, -8, -2)
+		s0[42].Parent = pl.Character
+	end)
+end
+coroutine.wrap(YNHSI_fake_script)()
+local function LOJUIEI_fake_script() -- _43.LocalScript 
+	local script = Instance.new('LocalScript', _43)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[43].Grip = CFrame.new(-1, -8, -2)
+		s0[43].Parent = pl.Character
+	end)
+end
+coroutine.wrap(LOJUIEI_fake_script)()
+local function OBYSJNL_fake_script() -- _44.LocalScript 
+	local script = Instance.new('LocalScript', _44)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[44].Grip = CFrame.new(-0, -8, -2)
+		s0[44].Parent = pl.Character
+	end)
+end
+coroutine.wrap(OBYSJNL_fake_script)()
+local function YTMFLZZ_fake_script() -- _45.LocalScript 
+	local script = Instance.new('LocalScript', _45)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[45].Grip = CFrame.new(1, -8, -2)
+		s0[45].Parent = pl.Character
+	end)
+end
+coroutine.wrap(YTMFLZZ_fake_script)()
+local function UHZB_fake_script() -- _46.LocalScript 
+	local script = Instance.new('LocalScript', _46)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[46].Grip = CFrame.new(2, -8, -2)
+		s0[46].Parent = pl.Character
+	end)
+end
+coroutine.wrap(UHZB_fake_script)()
+local function AAOHT_fake_script() -- _47.LocalScript 
+	local script = Instance.new('LocalScript', _47)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[47].Grip = CFrame.new(3, -8, -2)
+		s0[47].Parent = pl.Character
+	end)
+end
+coroutine.wrap(AAOHT_fake_script)()
+local function ZKFJV_fake_script() -- _48.LocalScript 
+	local script = Instance.new('LocalScript', _48)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[48].Grip = CFrame.new(4, -8, -2)
+		s0[48].Parent = pl.Character
+	end)
+end
+coroutine.wrap(ZKFJV_fake_script)()
+local function YMSK_fake_script() -- _49.LocalScript 
+	local script = Instance.new('LocalScript', _49)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pl = game.Players.LocalPlayer
+		s = pl.Backpack:GetChildren()
+		s0 = {}
+		for _, x in s do if x:IsA("Folder") then wait() else table.insert(s0, x) end end
+		-----------
+		s0[49].Grip = CFrame.new(5, -8, -2)
+		s0[49].Parent = pl.Character
+	end)
+end
+coroutine.wrap(YMSK_fake_script)()
+local function EUGVTO_fake_script() -- On_2.LocalScript 
 	local script = Instance.new('LocalScript', On_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -782,8 +2264,141 @@ local function DSMQFR_fake_script() -- On_2.LocalScript
 		script.Parent.Parent.On.Visible =false
 	end)
 end
-coroutine.wrap(DSMQFR_fake_script)()
-local function MNXV_fake_script() -- Off_2.LocalScript 
+coroutine.wrap(EUGVTO_fake_script)()
+local function ACCQ_fake_script() -- On_2.LocalScript 
+	local script = Instance.new('LocalScript', On_2)
+
+	function mobilefly(speed)
+		local controlModule = require(game.Players.LocalPlayer.PlayerScripts:WaitForChild('PlayerModule'):WaitForChild("ControlModule"))
+		local bv = Instance.new("BodyVelocity")
+		bv.Name = "VelocityHandler"
+		bv.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bv.MaxForce = Vector3.new(0,0,0)
+		bv.Velocity = Vector3.new(0,0,0)
+	
+		local bg = Instance.new("BodyGyro")
+		bg.Name = "GyroHandler"
+		bg.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+		bg.P = 1000
+		bg.D = 50
+	
+	
+		local bg = Instance.new("BodyGyro")
+		bg.Name = "GyroHandler"
+		bg.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+		bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+		bg.P = 1000
+		bg.D = 50
+	
+		local Signal1
+		Signal1 = game.Players.LocalPlayer.CharacterAdded:Connect(function(NewChar)
+			local bv = Instance.new("BodyVelocity")
+			bv.Name = "VelocityHandler"
+			bv.Parent = NewChar:WaitForChild("Humanoid").RootPart
+			bv.MaxForce = Vector3.new(0,0,0)
+			bv.Velocity = Vector3.new(0,0,0)
+	
+			local bg = Instance.new("BodyGyro")
+			bg.Name = "GyroHandler"
+			bg.Parent = NewChar:WaitForChild("Humanoid").HumanoidRootPart
+			bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+			bg.P = 1000
+			bg.D = 50
+		end)
+	
+		local camera = game.Workspace.CurrentCamera
+	
+		local Signal2
+		Signal2 = game:GetService"RunService".RenderStepped:Connect(function()
+			if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") and game.Players.LocalPlayer.Character.Humanoid.RootPart and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("VelocityHandler") and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("GyroHandler") then
+	
+				game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.MaxForce = Vector3.new(9e9,9e9,9e9)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.MaxTorque = Vector3.new(9e9,9e9,9e9)
+				game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+	
+				game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler.CFrame = camera.CoordinateFrame
+				local direction = controlModule:GetMoveVector()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = Vector3.new()
+				if direction.X > 0 then
+	
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity + camera.CFrame.RightVector*(direction.X*speed)
+				end
+				if direction.X < 0 then
+	
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity + camera.CFrame.RightVector*(direction.X*speed)
+				end
+	
+				if direction.Z > 0 then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity - camera.CFrame.LookVector*(direction.Z*speed)
+				end
+	
+				if direction.Z < 0 then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler.Velocity - camera.CFrame.LookVector*(direction.Z*speed)
+				end
+			end
+		end)
+	end
+	
+	function unmobilefly()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.VelocityHandler:Destroy()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.GyroHandler:Destroy()
+		game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+		Signal1:Disconnect()
+		Signal2:Disconnect()
+	end
+	
+	local accessories = {}
+	function GodMode()
+	
+		if game.Players.LocalPlayer.Character then
+	
+			if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+	
+				for _, accessory in pairs(game.Players.LocalPlayer.Character.Humanoid:GetAccessories()) do
+	
+					table.insert(accessories, accessory:Clone())
+	
+				end
+	
+				game.Players.LocalPlayer.Character.Humanoid.Name = "deku"
+	
+			end
+	
+			local v = game.Players.LocalPlayer.Character["deku"]:Clone()
+	
+			v.Parent = game.Players.LocalPlayer.Character
+	
+			v.Name = "Humanoid"
+	
+			wait(0.1)
+	
+			game.Players.LocalPlayer.Character["deku"]:Destroy()
+	
+			workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+	
+			for _, accessory in pairs(accessories) do
+	
+				game.Players.LocalPlayer.Character.Humanoid:AddAccessory(accessory)
+	
+			end
+	
+			game.Players.LocalPlayer.Character.Animate.Disabled = true
+	
+			wait(0.1)
+	
+			game.Players.LocalPlayer.Character.Animate.Disabled = false
+	
+		end
+	
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		unmobilefly()
+	end)
+end
+coroutine.wrap(ACCQ_fake_script)()
+local function HCNBOE_fake_script() -- Off_2.LocalScript 
 	local script = Instance.new('LocalScript', Off_2)
 
 	function mobilefly(speed)
@@ -915,8 +2530,8 @@ local function MNXV_fake_script() -- Off_2.LocalScript
 		mobilefly(79)
 	end)
 end
-coroutine.wrap(MNXV_fake_script)()
-local function WBDFZ_fake_script() -- Off_2.LocalScript 
+coroutine.wrap(HCNBOE_fake_script)()
+local function HZOJA_fake_script() -- Off_2.LocalScript 
 	local script = Instance.new('LocalScript', Off_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -924,4 +2539,14 @@ local function WBDFZ_fake_script() -- Off_2.LocalScript
 		script.Parent.Parent.Off.Visible = false
 	end)
 end
-coroutine.wrap(WBDFZ_fake_script)()
+coroutine.wrap(HZOJA_fake_script)()
+local function QSMJIAU_fake_script() -- TextButton2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.parent.Parent.MainFrame.Visible = true
+		script.Parent.Parent.TextButton2.Visible = false
+		script.Parent.Parent.TextButton.Visible = true
+	end)
+end
+coroutine.wrap(QSMJIAU_fake_script)()
